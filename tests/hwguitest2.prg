@@ -45,7 +45,7 @@ FUNCTION Main()
    // set the media to the player
    libvlc_media_player_set_media(player, media)
 
-   INIT DIALOG oDialog TITLE "Test" SIZE 800, 600
+   INIT DIALOG oDialog TITLE "Testing HWGUI and libvlc" SIZE 800, 600
 
    MENU OF oDialog
       MENU TITLE "&Options"
