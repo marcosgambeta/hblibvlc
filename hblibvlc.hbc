@@ -1,0 +1,8 @@
+incpaths=include
+libpaths=lib/${hb_plat}/${hb_comp}
+libpaths={LIBVLC_LIB_DIR}
+libs=hblibvlc
+{win}libs=libvlc.dll
+{win}libs=libvlccore.dll
+{!win}libs=libvlc
+{!win}libs=libvlccore
