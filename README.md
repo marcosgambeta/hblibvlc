@@ -27,7 +27,19 @@ set VLC_LIB_DIR=\libvlc\build\x64
 
 Adjust the paths to your environment.
 
-Requisites to run tests:
+To compile the library:
+
+```
+hbmk2 hblibvlc.hbp
+```
+
+To compile the tests:
+
+```
+hbmk2 test1 ../hblibvlc.hbc
+```
+
+Requisites to run the tests:
 
 plugins folder  
 libvlc.dll  
