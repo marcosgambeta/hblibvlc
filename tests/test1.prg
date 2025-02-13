@@ -1,3 +1,12 @@
+//
+// hblibvlc test
+//
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
+
+// Compile with:
+// hbmk2 test1 ../hblibvlc.hbc
+
 FUNCTION Main()
 
    LOCAL vlc_instance
