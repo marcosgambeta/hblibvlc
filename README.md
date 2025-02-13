@@ -11,6 +11,22 @@ build\x86: libvlc for 32-bit
 
 build\x64: libvlc for 64-bit
 
+Set the variables below for 32-bit:
+
+```
+set VLC_INC_DIR=\libvlc\build\x86\include  
+set VLC_LIB_DIR=\libvlc\build\x86  
+```
+
+Set the variables below for 64-bit:
+
+```
+set VLC_INC_DIR=\libvlc\build\x64\include  
+set VLC_LIB_DIR=\libvlc\build\x64  
+```
+
+Adjust the paths to your environment.
+
 Requisites to run tests:
 
 plugins folder  
