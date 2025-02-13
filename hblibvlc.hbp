@@ -1,0 +1,11 @@
+-hblib
+
+-olib/${hb_plat}/${hb_comp}/hblibvlc
+
+-gc3
+
+-i${LIBVLC_INCLUDE_DIR}
+
+src/libvlc.c
+src/libvlc_media.c
+src/libvlc_media_player.c
