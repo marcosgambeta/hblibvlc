@@ -130,10 +130,12 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_HWND)
 // LIBVLC_API void libvlc_media_player_set_android_context( libvlc_media_player_t *p_mi, void *p_awindow_handler )
 
 // LIBVLC_API int libvlc_media_player_set_evas_object( libvlc_media_player_t *p_mi, void *p_evas_object )
+#if 0
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_EVAS_OBJECT)
 {
   hb_retni(libvlc_media_player_set_evas_object((libvlc_media_player_t *)hb_parptr(1), (void *)hb_parptr(2)));
 }
+#endif
 
 // LIBVLC_API void libvlc_audio_set_callbacks( libvlc_media_player_t *mp, libvlc_audio_play_cb play, libvlc_audio_pause_cb pause, libvlc_audio_resume_cb resume, libvlc_audio_flush_cb flush, libvlc_audio_drain_cb drain, void *opaque )
 
