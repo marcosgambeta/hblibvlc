@@ -4,7 +4,7 @@
 
 -gc3
 
--i${LIBVLC_INCLUDE_DIR}
+-i${LIBVLC_INC_DIR}
 
 src/libvlc.c
 src/libvlc_media.c
