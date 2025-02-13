@@ -44,3 +44,8 @@ Requisites to run the tests:
 plugins folder  
 libvlc.dll  
 libvlccore.dll  
+
+## Links
+
+https://www.videolan.org/vlc/libvlc.html  
+https://www.nuget.org/packages/VideoLAN.LibVLC.Windows  
