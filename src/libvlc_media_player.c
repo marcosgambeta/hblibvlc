@@ -128,6 +128,10 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_HWND)
 }
 
 // LIBVLC_API void libvlc_media_player_set_android_context( libvlc_media_player_t *p_mi, void *p_awindow_handler )
+HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_ANDROID_CONTEXT)
+{
+  libvlc_media_player_set_android_context((libvlc_media_player_t *)hb_parptr(1), (void *)hb_parptr(2));
+}
 
 // LIBVLC_API int libvlc_media_player_set_evas_object( libvlc_media_player_t *p_mi, void *p_evas_object )
 #if 0
@@ -150,10 +154,22 @@ HB_FUNC(LIBVLC_AUDIO_SET_FORMAT)
 }
 
 // LIBVLC_API libvlc_time_t libvlc_media_player_get_length( libvlc_media_player_t *p_mi )
+HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_LENGTH)
+{
+  hb_retnl((libvlc_time_t)libvlc_media_player_get_length((libvlc_media_player_t *)hb_parptr(1)));
+}
 
 // LIBVLC_API libvlc_time_t libvlc_media_player_get_time( libvlc_media_player_t *p_mi )
+HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_TIME)
+{
+  hb_retnl((libvlc_time_t)libvlc_media_player_get_time((libvlc_media_player_t *)hb_parptr(1)));
+}
 
 // LIBVLC_API void libvlc_media_player_set_time( libvlc_media_player_t *p_mi, libvlc_time_t i_time )
+HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_TIME)
+{
+  libvlc_media_player_set_time((libvlc_media_player_t *)hb_parptr(1), (libvlc_time_t)hb_parnl(2));
+}
 
 // LIBVLC_API float libvlc_media_player_get_position( libvlc_media_player_t *p_mi )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_POSITION)
@@ -168,6 +184,10 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_POSITION)
 }
 
 // LIBVLC_API void libvlc_media_player_set_chapter( libvlc_media_player_t *p_mi, int i_chapter )
+HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_CHAPTER)
+{
+  libvlc_media_player_set_chapter((libvlc_media_player_t *)hb_parptr(1), hb_parni(2));
+}
 
 // LIBVLC_API int libvlc_media_player_get_chapter( libvlc_media_player_t *p_mi )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_CHAPTER)
@@ -328,8 +348,24 @@ HB_FUNC(LIBVLC_VIDEO_SET_MOUSE_INPUT)
 }
 
 // LIBVLC_API int libvlc_video_get_size( libvlc_media_player_t *p_mi, unsigned num, unsigned *px, unsigned *py )
+HB_FUNC(LIBVLC_VIDEO_GET_SIZE)
+{
+  unsigned px;
+  unsigned py;
+  hb_retni(libvlc_video_get_size((libvlc_media_player_t *)hb_parptr(1), (unsigned)hb_parni(2), &px, &py));
+  hb_storni(px, 3);
+  hb_storni(py, 4);
+}
 
 // LIBVLC_API int libvlc_video_get_cursor( libvlc_media_player_t *p_mi, unsigned num, int *px, int *py )
+HB_FUNC(LIBVLC_VIDEO_GET_CURSOR)
+{
+  int px;
+  int py;
+  hb_retni(libvlc_video_get_cursor((libvlc_media_player_t *)hb_parptr(1), (unsigned)hb_parni(2), &px, &py));
+  hb_storni(px, 3);
+  hb_storni(py, 4);
+}
 
 // LIBVLC_API float libvlc_video_get_scale( libvlc_media_player_t *p_mi )
 HB_FUNC(LIBVLC_VIDEO_GET_SCALE)
