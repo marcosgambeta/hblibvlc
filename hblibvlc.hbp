@@ -11,4 +11,5 @@ src/libvlc_media.c
 src/libvlc_media_discoverer.c
 src/libvlc_media_library.c
 src/libvlc_media_list.c
+src/libvlc_media_list_player.c
 src/libvlc_media_player.c
