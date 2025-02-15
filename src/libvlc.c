@@ -119,13 +119,13 @@ HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
 // LIBVLC_API libvlc_module_description_t *libvlc_audio_filter_list_get( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_AUDIO_FILTER_LIST_GET)
 {
-  hb_retptr((libvlc_module_description_t *)libvlc_audio_filter_list_get(libvlc_par_instance(1)));
+  libvlc_ret_module_description(libvlc_audio_filter_list_get(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API libvlc_module_description_t *libvlc_video_filter_list_get( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_VIDEO_FILTER_LIST_GET)
 {
-  hb_retptr((libvlc_module_description_t *)libvlc_video_filter_list_get(libvlc_par_instance(1)));
+  libvlc_ret_module_description(libvlc_video_filter_list_get(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API int64_t libvlc_clock(void)
