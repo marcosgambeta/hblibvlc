@@ -269,7 +269,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_STATE)
 // LIBVLC_API unsigned libvlc_media_player_has_vout( libvlc_media_player_t *p_mi )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_HAS_VOUT)
 {
-  hb_retni((unsigned)libvlc_media_player_has_vout(libvlc_par_media_player(1)));
+  libvlc_ret_unsigned(libvlc_media_player_has_vout(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API int libvlc_media_player_is_seekable( libvlc_media_player_t *p_mi )
@@ -671,7 +671,7 @@ HB_FUNC(LIBVLC_AUDIO_SET_CHANNEL)
 // LIBVLC_API unsigned libvlc_audio_equalizer_get_preset_count( void )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PRESET_COUNT)
 {
-  hb_retni((unsigned)libvlc_audio_equalizer_get_preset_count());
+  libvlc_ret_unsigned(libvlc_audio_equalizer_get_preset_count());
 }
 
 // LIBVLC_API const char *libvlc_audio_equalizer_get_preset_name( unsigned u_index )
@@ -683,7 +683,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PRESET_NAME)
 // LIBVLC_API unsigned libvlc_audio_equalizer_get_band_count( void )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_BAND_COUNT)
 {
-  hb_retni((unsigned)libvlc_audio_equalizer_get_band_count());
+  libvlc_ret_unsigned(libvlc_audio_equalizer_get_band_count());
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_band_frequency( unsigned u_index )
