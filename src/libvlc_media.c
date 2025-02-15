@@ -7,10 +7,12 @@
 #include <vlc/vlc.h>
 #include <hbapi.h>
 
+#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+
 // LIBVLC_API libvlc_media_t *libvlc_media_new_location(libvlc_instance_t *p_instance, const char * psz_mrl )
 HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_location((libvlc_instance_t *)hb_parptr(1), hb_parc(2)));
+  hb_retptr((libvlc_media_t *)libvlc_media_new_location(libvlc_instance_par(1), hb_parc(2)));
 }
 
 // LIBVLC_API libvlc_media_t *libvlc_media_new_path(libvlc_instance_t *p_instance, const char *path)

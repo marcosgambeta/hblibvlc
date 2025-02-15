@@ -8,11 +8,12 @@
 #include <hbapi.h>
 
 #define libvlc_media_player_par(n) (libvlc_media_player_t *)hb_parptr(n)
+#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
 
 // LIBVLC_API libvlc_media_list_player_t * libvlc_media_list_player_new( libvlc_instance_t * p_instance )
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_NEW)
 {
-  hb_retptr((libvlc_media_list_player_t *)libvlc_media_list_player_new((libvlc_instance_t *)hb_parptr(1)));
+  hb_retptr((libvlc_media_list_player_t *)libvlc_media_list_player_new(libvlc_instance_par(1)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_release( libvlc_media_list_player_t * p_mlp )

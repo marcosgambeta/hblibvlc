@@ -7,10 +7,12 @@
 #include <vlc/vlc.h>
 #include <hbapi.h>
 
+#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+
 // LIBVLC_API libvlc_media_discoverer_t * libvlc_media_discoverer_new( libvlc_instance_t * p_inst, const char * psz_name )
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)
 {
-  hb_retptr((libvlc_media_discoverer_t *)libvlc_media_discoverer_new((libvlc_instance_t *)hb_parptr(1), hb_parc(2)));
+  hb_retptr((libvlc_media_discoverer_t *)libvlc_media_discoverer_new(libvlc_instance_par(1), hb_parc(2)));
 }
 
 // LIBVLC_API int libvlc_media_discoverer_start( libvlc_media_discoverer_t * p_mdis )

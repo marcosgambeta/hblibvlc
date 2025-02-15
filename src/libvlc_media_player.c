@@ -8,11 +8,12 @@
 #include <hbapi.h>
 
 #define libvlc_media_player_par(n) (libvlc_media_player_t *)hb_parptr(n)
+#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
 
 // LIBVLC_API libvlc_media_player_t * libvlc_media_player_new( libvlc_instance_t *p_libvlc_instance )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_NEW)
 {
-  hb_retptr((libvlc_media_player_t *)libvlc_media_player_new((libvlc_instance_t *)hb_parptr(1)));
+  hb_retptr((libvlc_media_player_t *)libvlc_media_player_new(libvlc_instance_par(1)));
 }
 
 // LIBVLC_API libvlc_media_player_t * libvlc_media_player_new_from_media( libvlc_media_t *p_md )
@@ -558,7 +559,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_ADJUST_FLOAT)
 // LIBVLC_API libvlc_audio_output_t * libvlc_audio_output_list_get( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_AUDIO_OUTPUT_LIST_GET)
 {
-  hb_retptr((libvlc_audio_output_t *)libvlc_audio_output_list_get((libvlc_instance_t *)hb_parptr(1)));
+  hb_retptr((libvlc_audio_output_t *)libvlc_audio_output_list_get(libvlc_instance_par(1)));
 }
 
 // LIBVLC_API void libvlc_audio_output_list_release( libvlc_audio_output_t *p_list )
@@ -582,7 +583,7 @@ HB_FUNC(LIBVLC_AUDIO_OUTPUT_DEVICE_ENUM)
 // LIBVLC_API libvlc_audio_output_device_t * libvlc_audio_output_device_list_get( libvlc_instance_t *p_instance, const char *aout )
 HB_FUNC(LIBVLC_AUDIO_OUTPUT_DEVICE_LIST_GET)
 {
-  hb_retptr((libvlc_audio_output_device_t *)libvlc_audio_output_device_list_get((libvlc_instance_t *)hb_parptr(1), hb_parc(2)));
+  hb_retptr((libvlc_audio_output_device_t *)libvlc_audio_output_device_list_get(libvlc_instance_par(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_audio_output_device_list_release(libvlc_audio_output_device_t *p_list )

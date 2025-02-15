@@ -7,6 +7,8 @@
 #include <vlc/vlc.h>
 #include <hbapi.h>
 
+#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+
 // LIBVLC_API libvlc_renderer_item_t * libvlc_renderer_item_hold(libvlc_renderer_item_t *p_item)
 HB_FUNC(LIBVLC_RENDERER_ITEM_HOLD)
 {
@@ -46,7 +48,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 // LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new( libvlc_instance_t *p_inst, const char *psz_name )
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 {
-  hb_retptr((libvlc_renderer_discoverer_t *)libvlc_renderer_discoverer_new((libvlc_instance_t *)hb_parptr(1), hb_parc(2)));
+  hb_retptr((libvlc_renderer_discoverer_t *)libvlc_renderer_discoverer_new(libvlc_instance_par(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_renderer_discoverer_release( libvlc_renderer_discoverer_t *p_rd )
