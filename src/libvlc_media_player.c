@@ -707,37 +707,37 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_NEW_FROM_PRESET)
 // LIBVLC_API void libvlc_audio_equalizer_release( libvlc_equalizer_t *p_equalizer )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_RELEASE)
 {
-  libvlc_audio_equalizer_release((libvlc_equalizer_t *)hb_parptr(1));
+  libvlc_audio_equalizer_release(libvlc_equalizer_par(1));
 }
 
 // LIBVLC_API int libvlc_audio_equalizer_set_preamp( libvlc_equalizer_t *p_equalizer, float f_preamp )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_SET_PREAMP)
 {
-  hb_retni(libvlc_audio_equalizer_set_preamp((libvlc_equalizer_t *)hb_parptr(1), (float)hb_parnd(2)));
+  hb_retni(libvlc_audio_equalizer_set_preamp(libvlc_equalizer_par(1), (float)hb_parnd(2)));
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_preamp( libvlc_equalizer_t *p_equalizer )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PREAMP)
 {
-  hb_retnd((float)libvlc_audio_equalizer_get_preamp((libvlc_equalizer_t *)hb_parptr(1)));
+  hb_retnd((float)libvlc_audio_equalizer_get_preamp(libvlc_equalizer_par(1)));
 }
 
 // LIBVLC_API int libvlc_audio_equalizer_set_amp_at_index( libvlc_equalizer_t *p_equalizer, float f_amp, unsigned u_band )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_SET_AMP_AT_INDEX)
 {
-  hb_retni(libvlc_audio_equalizer_set_amp_at_index((libvlc_equalizer_t *)hb_parptr(1), (float)hb_parnd(2), (unsigned)hb_parni(3)));
+  hb_retni(libvlc_audio_equalizer_set_amp_at_index(libvlc_equalizer_par(1), (float)hb_parnd(2), (unsigned)hb_parni(3)));
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_amp_at_index( libvlc_equalizer_t *p_equalizer, unsigned u_band )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_AMP_AT_INDEX)
 {
-  hb_retnd((float)libvlc_audio_equalizer_get_amp_at_index((libvlc_equalizer_t *)hb_parptr(1), (unsigned)hb_parni(2)));
+  hb_retnd((float)libvlc_audio_equalizer_get_amp_at_index(libvlc_equalizer_par(1), (unsigned)hb_parni(2)));
 }
 
 // LIBVLC_API int libvlc_media_player_set_equalizer( libvlc_media_player_t *p_mi, libvlc_equalizer_t *p_equalizer )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_EQUALIZER)
 {
-  hb_retni(libvlc_media_player_set_equalizer(libvlc_media_player_par(1), (libvlc_equalizer_t *)hb_parptr(2)));
+  hb_retni(libvlc_media_player_set_equalizer(libvlc_media_player_par(1), libvlc_equalizer_par(2)));
 }
 
 // LIBVLC_API int libvlc_media_player_get_role(libvlc_media_player_t *p_mi)
