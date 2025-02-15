@@ -8,6 +8,7 @@
 #include <hbapi.h>
 
 #define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+#define libvlc_module_description_par(n) (libvlc_module_description_t *)hb_parptr(n)
 
 // LIBVLC_API const char *libvlc_errmsg (void)
 HB_FUNC(LIBVLC_ERRMSG)
@@ -114,7 +115,7 @@ HB_FUNC(LIBVLC_LOG_UNSET)
 // LIBVLC_API void libvlc_module_description_list_release( libvlc_module_description_t *p_list )
 HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
 {
-  libvlc_module_description_list_release((libvlc_module_description_t *)hb_parptr(1));
+  libvlc_module_description_list_release(libvlc_module_description_par(1));
 }
 
 // LIBVLC_API libvlc_module_description_t *libvlc_audio_filter_list_get( libvlc_instance_t *p_instance )
