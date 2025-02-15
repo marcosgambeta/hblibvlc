@@ -39,6 +39,11 @@ To compile the tests:
 hbmk2 test1 ../hblibvlc.hbc
 ```
 
+The tests require a file called url.txt with a link to reproduce.
+
+Example:  
+https://archive.org/download/CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
+
 Requisites to run the tests:
 
 plugins folder  
