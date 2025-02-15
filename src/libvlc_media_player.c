@@ -91,7 +91,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_RENDERER)
 // LIBVLC_API void libvlc_video_set_format( libvlc_media_player_t *mp, const char *chroma, unsigned width, unsigned height, unsigned pitch )
 HB_FUNC(LIBVLC_VIDEO_SET_FORMAT)
 {
-  libvlc_video_set_format(libvlc_media_player_par(1), hb_parc(2), (unsigned)hb_parni(3), (unsigned)hb_parni(4), (unsigned)hb_parni(5));
+  libvlc_video_set_format(libvlc_media_player_par(1), hb_parc(2), libvlc_unsigned_par(3), libvlc_unsigned_par(4), libvlc_unsigned_par(5));
 }
 
 // LIBVLC_API void libvlc_video_set_format_callbacks( libvlc_media_player_t *mp, libvlc_video_format_cb setup, libvlc_video_cleanup_cb cleanup )
@@ -155,7 +155,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_EVAS_OBJECT)
 // LIBVLC_API void libvlc_audio_set_format( libvlc_media_player_t *mp, const char *format, unsigned rate, unsigned channels )
 HB_FUNC(LIBVLC_AUDIO_SET_FORMAT)
 {
-  libvlc_audio_set_format(libvlc_media_player_par(1), hb_parc(2), (unsigned)hb_parni(3), (unsigned)hb_parni(4));
+  libvlc_audio_set_format(libvlc_media_player_par(1), hb_parc(2), libvlc_unsigned_par(3), libvlc_unsigned_par(4));
 }
 
 // LIBVLC_API libvlc_time_t libvlc_media_player_get_length( libvlc_media_player_t *p_mi )
@@ -299,7 +299,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_NEXT_FRAME)
 // LIBVLC_API void libvlc_media_player_navigate( libvlc_media_player_t* p_mi, unsigned navigate )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_NAVIGATE)
 {
-  libvlc_media_player_navigate((libvlc_media_player_t*)hb_parptr(1), (unsigned)hb_parni(2));
+  libvlc_media_player_navigate((libvlc_media_player_t*)hb_parptr(1), libvlc_unsigned_par(2));
 }
 
 // LIBVLC_API void libvlc_media_player_set_video_title_display( libvlc_media_player_t *p_mi, libvlc_position_t position, unsigned int timeout )
@@ -343,13 +343,13 @@ HB_FUNC(LIBVLC_GET_FULLSCREEN)
 // LIBVLC_API void libvlc_video_set_key_input( libvlc_media_player_t *p_mi, unsigned on )
 HB_FUNC(LIBVLC_VIDEO_SET_KEY_INPUT)
 {
-  libvlc_video_set_key_input(libvlc_media_player_par(1), (unsigned)hb_parni(2));
+  libvlc_video_set_key_input(libvlc_media_player_par(1), libvlc_unsigned_par(2));
 }
 
 // LIBVLC_API void libvlc_video_set_mouse_input( libvlc_media_player_t *p_mi, unsigned on )
 HB_FUNC(LIBVLC_VIDEO_SET_MOUSE_INPUT)
 {
-  libvlc_video_set_mouse_input(libvlc_media_player_par(1), (unsigned)hb_parni(2));
+  libvlc_video_set_mouse_input(libvlc_media_player_par(1), libvlc_unsigned_par(2));
 }
 
 // LIBVLC_API int libvlc_video_get_size( libvlc_media_player_t *p_mi, unsigned num, unsigned *px, unsigned *py )
@@ -357,7 +357,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_SIZE)
 {
   unsigned px;
   unsigned py;
-  hb_retni(libvlc_video_get_size(libvlc_media_player_par(1), (unsigned)hb_parni(2), &px, &py));
+  hb_retni(libvlc_video_get_size(libvlc_media_player_par(1), libvlc_unsigned_par(2), &px, &py));
   hb_storni(px, 3);
   hb_storni(py, 4);
 }
@@ -367,7 +367,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_CURSOR)
 {
   int px;
   int py;
-  hb_retni(libvlc_video_get_cursor(libvlc_media_player_par(1), (unsigned)hb_parni(2), &px, &py));
+  hb_retni(libvlc_video_get_cursor(libvlc_media_player_par(1), libvlc_unsigned_par(2), &px, &py));
   hb_storni(px, 3);
   hb_storni(py, 4);
 }
@@ -483,7 +483,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_TRACK)
 // LIBVLC_API int libvlc_video_take_snapshot( libvlc_media_player_t *p_mi, unsigned num, const char *psz_filepath, unsigned int i_width, unsigned int i_height )
 HB_FUNC(LIBVLC_VIDEO_TAKE_SNAPSHOT)
 {
-  hb_retni(libvlc_video_take_snapshot(libvlc_media_player_par(1), (unsigned)hb_parni(2), hb_parc(3), (unsigned int)hb_parni(4), (unsigned int)hb_parni(5)));
+  hb_retni(libvlc_video_take_snapshot(libvlc_media_player_par(1), libvlc_unsigned_par(2), hb_parc(3), (unsigned int)hb_parni(4), (unsigned int)hb_parni(5)));
 }
 
 // LIBVLC_API void libvlc_video_set_deinterlace( libvlc_media_player_t *p_mi, const char *psz_mode )
@@ -495,7 +495,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_DEINTERLACE)
 // LIBVLC_API int libvlc_video_get_marquee_int( libvlc_media_player_t *p_mi, unsigned option )
 HB_FUNC(LIBVLC_VIDEO_GET_MARQUEE_INT)
 {
-  hb_retni(libvlc_video_get_marquee_int(libvlc_media_player_par(1), (unsigned)hb_parni(2)));
+  hb_retni(libvlc_video_get_marquee_int(libvlc_media_player_par(1), libvlc_unsigned_par(2)));
 }
 
 // LIBVLC_API char *libvlc_video_get_marquee_string( libvlc_media_player_t *p_mi, unsigned option )
@@ -503,55 +503,55 @@ HB_FUNC(LIBVLC_VIDEO_GET_MARQUEE_INT)
 // LIBVLC_API void libvlc_video_set_marquee_int( libvlc_media_player_t *p_mi, unsigned option, int i_val )
 HB_FUNC(LIBVLC_VIDEO_SET_MARQUEE_INT)
 {
-  libvlc_video_set_marquee_int(libvlc_media_player_par(1), (unsigned)hb_parni(2), (int)hb_parni(3));
+  libvlc_video_set_marquee_int(libvlc_media_player_par(1), libvlc_unsigned_par(2), (int)hb_parni(3));
 }
 
 // LIBVLC_API void libvlc_video_set_marquee_string( libvlc_media_player_t *p_mi, unsigned option, const char *psz_text )
 HB_FUNC(LIBVLC_VIDEO_SET_MARQUEE_STRING)
 {
-  libvlc_video_set_marquee_string(libvlc_media_player_par(1), (unsigned)hb_parni(2), hb_parc(3));
+  libvlc_video_set_marquee_string(libvlc_media_player_par(1), libvlc_unsigned_par(2), hb_parc(3));
 }
 
 // LIBVLC_API int libvlc_video_get_logo_int( libvlc_media_player_t *p_mi, unsigned option )
 HB_FUNC(LIBVLC_VIDEO_GET_LOGO_INT)
 {
-  hb_retni(libvlc_video_get_logo_int(libvlc_media_player_par(1), (unsigned)hb_parni(2)));
+  hb_retni(libvlc_video_get_logo_int(libvlc_media_player_par(1), libvlc_unsigned_par(2)));
 }
 
 // LIBVLC_API void libvlc_video_set_logo_int( libvlc_media_player_t *p_mi, unsigned option, int value )
 HB_FUNC(LIBVLC_VIDEO_SET_LOGO_INT)
 {
-  libvlc_video_set_logo_int(libvlc_media_player_par(1), (unsigned)hb_parni(2), hb_parni(3));
+  libvlc_video_set_logo_int(libvlc_media_player_par(1), libvlc_unsigned_par(2), hb_parni(3));
 }
 
 // LIBVLC_API void libvlc_video_set_logo_string( libvlc_media_player_t *p_mi, unsigned option, const char *psz_value )
 HB_FUNC(LIBVLC_VIDEO_SET_LOGO_STRING)
 {
-  libvlc_video_set_logo_string(libvlc_media_player_par(1), (unsigned)hb_parni(2), hb_parc(3));
+  libvlc_video_set_logo_string(libvlc_media_player_par(1), libvlc_unsigned_par(2), hb_parc(3));
 }
 
 // LIBVLC_API int libvlc_video_get_adjust_int( libvlc_media_player_t *p_mi, unsigned option )
 HB_FUNC(LIBVLC_VIDEO_GET_ADJUST_INT)
 {
-  hb_retni(libvlc_video_get_adjust_int(libvlc_media_player_par(1), (unsigned)hb_parni(2)));
+  hb_retni(libvlc_video_get_adjust_int(libvlc_media_player_par(1), libvlc_unsigned_par(2)));
 }
 
 // LIBVLC_API void libvlc_video_set_adjust_int( libvlc_media_player_t *p_mi, unsigned option, int value )
 HB_FUNC(LIBVLC_VIDEO_SET_ADJUST_INT)
 {
-  libvlc_video_set_adjust_int(libvlc_media_player_par(1), (unsigned)hb_parni(2), hb_parni(3));
+  libvlc_video_set_adjust_int(libvlc_media_player_par(1), libvlc_unsigned_par(2), hb_parni(3));
 }
 
 // LIBVLC_API float libvlc_video_get_adjust_float( libvlc_media_player_t *p_mi, unsigned option )
 HB_FUNC(LIBVLC_VIDEO_GET_ADJUST_FLOAT)
 {
-  hb_retnd((float)libvlc_video_get_adjust_float(libvlc_media_player_par(1), (unsigned)hb_parni(2)));
+  hb_retnd((float)libvlc_video_get_adjust_float(libvlc_media_player_par(1), libvlc_unsigned_par(2)));
 }
 
 // LIBVLC_API void libvlc_video_set_adjust_float( libvlc_media_player_t *p_mi, unsigned option, float value )
 HB_FUNC(LIBVLC_VIDEO_SET_ADJUST_FLOAT)
 {
-  libvlc_video_set_adjust_float(libvlc_media_player_par(1), (unsigned)hb_parni(2), (float)hb_parnd(3));
+  libvlc_video_set_adjust_float(libvlc_media_player_par(1), libvlc_unsigned_par(2), (float)hb_parnd(3));
 }
 
 // LIBVLC_API libvlc_audio_output_t * libvlc_audio_output_list_get( libvlc_instance_t *p_instance )
@@ -677,7 +677,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PRESET_COUNT)
 // LIBVLC_API const char *libvlc_audio_equalizer_get_preset_name( unsigned u_index )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PRESET_NAME)
 {
-  hb_retc((const char *)libvlc_audio_equalizer_get_preset_name((unsigned)hb_parni(1)));
+  hb_retc((const char *)libvlc_audio_equalizer_get_preset_name(libvlc_unsigned_par(1)));
 }
 
 // LIBVLC_API unsigned libvlc_audio_equalizer_get_band_count( void )
@@ -689,7 +689,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_BAND_COUNT)
 // LIBVLC_API float libvlc_audio_equalizer_get_band_frequency( unsigned u_index )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_BAND_FREQUENCY)
 {
-  hb_retnd((float)libvlc_audio_equalizer_get_band_frequency((unsigned)hb_parni(1)));
+  hb_retnd((float)libvlc_audio_equalizer_get_band_frequency(libvlc_unsigned_par(1)));
 }
 
 // LIBVLC_API libvlc_equalizer_t *libvlc_audio_equalizer_new( void )
@@ -701,7 +701,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_NEW)
 // LIBVLC_API libvlc_equalizer_t *libvlc_audio_equalizer_new_from_preset( unsigned u_index )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_NEW_FROM_PRESET)
 {
-  hb_retptr((libvlc_equalizer_t *)libvlc_audio_equalizer_new_from_preset((unsigned)hb_parni(1)));
+  hb_retptr((libvlc_equalizer_t *)libvlc_audio_equalizer_new_from_preset(libvlc_unsigned_par(1)));
 }
 
 // LIBVLC_API void libvlc_audio_equalizer_release( libvlc_equalizer_t *p_equalizer )
@@ -725,13 +725,13 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PREAMP)
 // LIBVLC_API int libvlc_audio_equalizer_set_amp_at_index( libvlc_equalizer_t *p_equalizer, float f_amp, unsigned u_band )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_SET_AMP_AT_INDEX)
 {
-  hb_retni(libvlc_audio_equalizer_set_amp_at_index(libvlc_equalizer_par(1), (float)hb_parnd(2), (unsigned)hb_parni(3)));
+  hb_retni(libvlc_audio_equalizer_set_amp_at_index(libvlc_equalizer_par(1), (float)hb_parnd(2), libvlc_unsigned_par(3)));
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_amp_at_index( libvlc_equalizer_t *p_equalizer, unsigned u_band )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_AMP_AT_INDEX)
 {
-  hb_retnd((float)libvlc_audio_equalizer_get_amp_at_index(libvlc_equalizer_par(1), (unsigned)hb_parni(2)));
+  hb_retnd((float)libvlc_audio_equalizer_get_amp_at_index(libvlc_equalizer_par(1), libvlc_unsigned_par(2)));
 }
 
 // LIBVLC_API int libvlc_media_player_set_equalizer( libvlc_media_player_t *p_mi, libvlc_equalizer_t *p_equalizer )
@@ -749,5 +749,5 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_ROLE)
 // LIBVLC_API int libvlc_media_player_set_role(libvlc_media_player_t *p_mi, unsigned role)
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_ROLE)
 {
-  hb_retni(libvlc_media_player_set_role(libvlc_media_player_par(1), (unsigned)hb_parni(2)));
+  hb_retni(libvlc_media_player_set_role(libvlc_media_player_par(1), libvlc_unsigned_par(2)));
 }
