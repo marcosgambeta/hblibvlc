@@ -6,8 +6,7 @@
 
 #include <vlc/vlc.h>
 #include <hbapi.h>
-
-#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+#include "hblibvlc.h"
 
 // LIBVLC_API void libvlc_vlm_release( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_VLM_RELEASE)

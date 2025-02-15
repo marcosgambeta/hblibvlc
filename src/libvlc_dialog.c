@@ -6,6 +6,7 @@
 
 #include <vlc/vlc.h>
 #include <hbapi.h>
+#include "hblibvlc.h"
 
 // LIBVLC_API void libvlc_dialog_set_callbacks(libvlc_instance_t *p_instance, const libvlc_dialog_cbs *p_cbs, void *p_data)
 

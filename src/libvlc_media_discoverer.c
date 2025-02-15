@@ -6,8 +6,7 @@
 
 #include <vlc/vlc.h>
 #include <hbapi.h>
-
-#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
+#include "hblibvlc.h"
 
 // LIBVLC_API libvlc_media_discoverer_t * libvlc_media_discoverer_new( libvlc_instance_t * p_inst, const char * psz_name )
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)

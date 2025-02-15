@@ -6,9 +6,7 @@
 
 #include <vlc/vlc.h>
 #include <hbapi.h>
-
-#define libvlc_instance_par(n) (libvlc_instance_t *)hb_parptr(n)
-#define libvlc_module_description_par(n) (libvlc_module_description_t *)hb_parptr(n)
+#include "hblibvlc.h"
 
 // LIBVLC_API const char *libvlc_errmsg (void)
 HB_FUNC(LIBVLC_ERRMSG)
