@@ -11,7 +11,7 @@
 // LIBVLC_API libvlc_media_library_t * libvlc_media_library_new( libvlc_instance_t * p_instance )
 HB_FUNC(LIBVLC_MEDIA_LIBRARY_NEW)
 {
-  hb_retptr((libvlc_media_library_t *)libvlc_media_library_new(libvlc_instance_par(1)));
+  hb_retptr((libvlc_media_library_t *)libvlc_media_library_new(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API void libvlc_media_library_release( libvlc_media_library_t * p_mlib )

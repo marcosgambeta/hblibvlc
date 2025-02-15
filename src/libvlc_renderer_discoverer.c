@@ -11,13 +11,13 @@
 // LIBVLC_API libvlc_renderer_item_t * libvlc_renderer_item_hold(libvlc_renderer_item_t *p_item)
 HB_FUNC(LIBVLC_RENDERER_ITEM_HOLD)
 {
-  hb_retptr((libvlc_renderer_item_t *)libvlc_renderer_item_hold(libvlc_renderer_item_par(1)));
+  hb_retptr((libvlc_renderer_item_t *)libvlc_renderer_item_hold(libvlc_par_renderer_item(1)));
 }
 
 // LIBVLC_API void libvlc_renderer_item_release(libvlc_renderer_item_t *p_item)
 HB_FUNC(LIBVLC_RENDERER_ITEM_RELEASE)
 {
-  libvlc_renderer_item_release(libvlc_renderer_item_par(1));
+  libvlc_renderer_item_release(libvlc_par_renderer_item(1));
 }
 
 // LIBVLC_API const char * libvlc_renderer_item_name(const libvlc_renderer_item_t *p_item)
@@ -47,7 +47,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 // LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new( libvlc_instance_t *p_inst, const char *psz_name )
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 {
-  hb_retptr((libvlc_renderer_discoverer_t *)libvlc_renderer_discoverer_new(libvlc_instance_par(1), hb_parc(2)));
+  hb_retptr((libvlc_renderer_discoverer_t *)libvlc_renderer_discoverer_new(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_renderer_discoverer_release( libvlc_renderer_discoverer_t *p_rd )

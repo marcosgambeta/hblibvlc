@@ -11,7 +11,7 @@
 // LIBVLC_API libvlc_media_t *libvlc_media_new_location(libvlc_instance_t *p_instance, const char * psz_mrl )
 HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_location(libvlc_instance_par(1), hb_parc(2)));
+  hb_retptr((libvlc_media_t *)libvlc_media_new_location(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API libvlc_media_t *libvlc_media_new_path(libvlc_instance_t *p_instance, const char *path)
@@ -31,7 +31,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 // LIBVLC_API void libvlc_media_release( libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_RELEASE)
 {
-  libvlc_media_release(libvlc_media_par(1));
+  libvlc_media_release(libvlc_par_media(1));
 }
 
 // LIBVLC_API char *libvlc_media_get_mrl( libvlc_media_t *p_md )

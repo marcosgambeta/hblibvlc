@@ -33,19 +33,19 @@ HB_FUNC(LIBVLC_NEW)
 // LIBVLC_API void libvlc_release( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_RELEASE)
 {
-  libvlc_release(libvlc_instance_par(1));
+  libvlc_release(libvlc_par_instance(1));
 }
 
 // LIBVLC_API void libvlc_retain( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_RETAIN)
 {
-  libvlc_retain(libvlc_instance_par(1));
+  libvlc_retain(libvlc_par_instance(1));
 }
 
 // LIBVLC_API int libvlc_add_intf( libvlc_instance_t *p_instance, const char *name )
 HB_FUNC(LIBVLC_ADD_INTF)
 {
-  hb_retni((int)libvlc_add_intf(libvlc_instance_par(1), hb_parc(2)));
+  hb_retni((int)libvlc_add_intf(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_set_exit_handler( libvlc_instance_t *p_instance, void (*cb) (void *), void *opaque )
@@ -53,13 +53,13 @@ HB_FUNC(LIBVLC_ADD_INTF)
 // LIBVLC_API void libvlc_set_user_agent( libvlc_instance_t *p_instance, const char *name, const char *http )
 HB_FUNC(LIBVLC_SET_USER_AGENT)
 {
-  libvlc_set_user_agent(libvlc_instance_par(1), hb_parc(2), hb_parc(3));
+  libvlc_set_user_agent(libvlc_par_instance(1), hb_parc(2), hb_parc(3));
 }
 
 // LIBVLC_API void libvlc_set_app_id( libvlc_instance_t *p_instance, const char *id, const char *version, const char *icon )
 HB_FUNC(LIBVLC_SET_APP_ID)
 {
-  libvlc_set_app_id(libvlc_instance_par(1), hb_parc(2), hb_parc(3), hb_parc(4));
+  libvlc_set_app_id(libvlc_par_instance(1), hb_parc(2), hb_parc(3), hb_parc(4));
 }
 
 // LIBVLC_API const char * libvlc_get_version(void)
@@ -103,7 +103,7 @@ HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
 // LIBVLC_API void libvlc_log_unset( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_LOG_UNSET)
 {
-  libvlc_log_unset(libvlc_instance_par(1));
+  libvlc_log_unset(libvlc_par_instance(1));
 }
 
 // LIBVLC_API void libvlc_log_set( libvlc_instance_t *p_instance, libvlc_log_cb cb, void *data )
@@ -113,19 +113,19 @@ HB_FUNC(LIBVLC_LOG_UNSET)
 // LIBVLC_API void libvlc_module_description_list_release( libvlc_module_description_t *p_list )
 HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
 {
-  libvlc_module_description_list_release(libvlc_module_description_par(1));
+  libvlc_module_description_list_release(libvlc_par_module_description(1));
 }
 
 // LIBVLC_API libvlc_module_description_t *libvlc_audio_filter_list_get( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_AUDIO_FILTER_LIST_GET)
 {
-  hb_retptr((libvlc_module_description_t *)libvlc_audio_filter_list_get(libvlc_instance_par(1)));
+  hb_retptr((libvlc_module_description_t *)libvlc_audio_filter_list_get(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API libvlc_module_description_t *libvlc_video_filter_list_get( libvlc_instance_t *p_instance )
 HB_FUNC(LIBVLC_VIDEO_FILTER_LIST_GET)
 {
-  hb_retptr((libvlc_module_description_t *)libvlc_video_filter_list_get(libvlc_instance_par(1)));
+  hb_retptr((libvlc_module_description_t *)libvlc_video_filter_list_get(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API int64_t libvlc_clock(void)
