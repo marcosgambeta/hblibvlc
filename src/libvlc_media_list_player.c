@@ -89,7 +89,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PLAY_ITEM_AT_INDEX)
 // LIBVLC_API int libvlc_media_list_player_play_item(libvlc_media_list_player_t * p_mlp, libvlc_media_t * p_md)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PLAY_ITEM)
 {
-  hb_retni(libvlc_media_list_player_play_item((libvlc_media_list_player_t *)hb_parptr(1), (libvlc_media_t *)hb_parptr(2)));
+  hb_retni(libvlc_media_list_player_play_item((libvlc_media_list_player_t *)hb_parptr(1), libvlc_media_par(2)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_stop( libvlc_media_list_player_t * p_mlp)

@@ -31,7 +31,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 // LIBVLC_API void libvlc_media_release( libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_RELEASE)
 {
-  libvlc_media_release((libvlc_media_t *)hb_parptr(1));
+  libvlc_media_release(libvlc_media_par(1));
 }
 
 // LIBVLC_API char *libvlc_media_get_mrl( libvlc_media_t *p_md )

@@ -17,7 +17,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_NEW)
 // LIBVLC_API libvlc_media_player_t * libvlc_media_player_new_from_media( libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_NEW_FROM_MEDIA)
 {
-  hb_retptr((libvlc_media_player_t *)libvlc_media_player_new_from_media((libvlc_media_t *)hb_parptr(1)));
+  hb_retptr((libvlc_media_player_t *)libvlc_media_player_new_from_media(libvlc_media_par(1)));
 }
 
 // LIBVLC_API void libvlc_media_player_release( libvlc_media_player_t *p_mi )
@@ -35,7 +35,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_RETAIN)
 // LIBVLC_API void libvlc_media_player_set_media( libvlc_media_player_t *p_mi, libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_MEDIA)
 {
-  libvlc_media_player_set_media(libvlc_media_player_par(1), (libvlc_media_t *)hb_parptr(2));
+  libvlc_media_player_set_media(libvlc_media_player_par(1), libvlc_media_par(2));
 }
 
 // LIBVLC_API libvlc_media_t * libvlc_media_player_get_media( libvlc_media_player_t *p_mi )
