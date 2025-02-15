@@ -13,6 +13,7 @@
 #define libvlc_media_player_par(n) (libvlc_media_player_t *)hb_parptr(n)
 #define libvlc_media_par(n) (libvlc_media_t *)hb_parptr(n)
 #define libvlc_equalizer_par(n) (libvlc_equalizer_t *)hb_parptr(n)
+#define libvlc_renderer_item_par(n) (libvlc_renderer_item_t *)hb_parptr(n)
 #define libvlc_unsigned_par(n) (unsigned)hb_parni(n)
 
 #endif // HBLIBVLC_H

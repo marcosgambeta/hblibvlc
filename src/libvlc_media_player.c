@@ -83,7 +83,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_STOP)
 // LIBVLC_API int libvlc_media_player_set_renderer( libvlc_media_player_t *p_mi, libvlc_renderer_item_t *p_item )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_RENDERER)
 {
-  hb_retni(libvlc_media_player_set_renderer(libvlc_media_player_par(1), (libvlc_renderer_item_t *)hb_parptr(2)));
+  hb_retni(libvlc_media_player_set_renderer(libvlc_media_player_par(1), libvlc_renderer_item_par(2)));
 }
 
 // LIBVLC_API void libvlc_video_set_callbacks( libvlc_media_player_t *mp, libvlc_video_lock_cb lock, libvlc_video_unlock_cb unlock, libvlc_video_display_cb display, void *opaque )
