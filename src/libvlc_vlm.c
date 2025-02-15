@@ -113,7 +113,7 @@ HB_FUNC(LIBVLC_VLM_SHOW_MEDIA)
 // LIBVLC_API float libvlc_vlm_get_media_instance_position( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_POSITION)
 {
-  hb_retnd((float)libvlc_vlm_get_media_instance_position(libvlc_par_instance(1), hb_parc(2), hb_parni(3)));
+  libvlc_ret_float(libvlc_vlm_get_media_instance_position(libvlc_par_instance(1), hb_parc(2), hb_parni(3)));
 }
 
 // LIBVLC_API int libvlc_vlm_get_media_instance_time( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )

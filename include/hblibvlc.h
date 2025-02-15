@@ -20,5 +20,6 @@
 // macros for return
 #define libvlc_ret_int(x) hb_retni(x)
 #define libvlc_ret_unsigned(x) hb_retni(x)
+#define libvlc_ret_float(x) hb_retnd(x)
 
 #endif // HBLIBVLC_H
