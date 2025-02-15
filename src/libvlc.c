@@ -93,7 +93,7 @@ HB_FUNC(LIBVLC_FREE)
 // LIBVLC_API const char * libvlc_event_type_name( libvlc_event_type_t event_type )
 HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
 {
-  hb_retc(libvlc_event_type_name((libvlc_event_type_t)hb_parni(1)));
+  hb_retc(libvlc_event_type_name(libvlc_par_event_type(1)));
 }
 
 // LIBVLC_API void libvlc_log_get_context(const libvlc_log_t *ctx, const char **module, const char **file, unsigned *line)
