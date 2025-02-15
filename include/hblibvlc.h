@@ -16,6 +16,7 @@
 #define libvlc_par_renderer_item(n) (libvlc_renderer_item_t *)hb_parptr(n)
 #define libvlc_par_unsigned(n) (unsigned)hb_parni(n)
 #define libvlc_par_event_type(n) (libvlc_event_type_t)hb_parni(n)
+#define libvlc_par_float(n) (float)hb_parnd(n)
 
 // macros for return
 #define libvlc_ret_int(x) hb_retni(x)

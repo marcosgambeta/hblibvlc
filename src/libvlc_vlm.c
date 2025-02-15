@@ -101,7 +101,7 @@ HB_FUNC(LIBVLC_VLM_PAUSE_MEDIA)
 // LIBVLC_API int libvlc_vlm_seek_media( libvlc_instance_t *p_instance, const char *psz_name, float f_percentage )
 HB_FUNC(LIBVLC_VLM_SEEK_MEDIA)
 {
-  libvlc_ret_int(libvlc_vlm_seek_media(libvlc_par_instance(1), hb_parc(2), (float)hb_parnd(3)));
+  libvlc_ret_int(libvlc_vlm_seek_media(libvlc_par_instance(1), hb_parc(2), libvlc_par_float(3)));
 }
 
 // LIBVLC_API const char* libvlc_vlm_show_media( libvlc_instance_t *p_instance, const char *psz_name )

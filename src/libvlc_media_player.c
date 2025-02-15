@@ -185,7 +185,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_POSITION)
 // LIBVLC_API void libvlc_media_player_set_position( libvlc_media_player_t *p_mi, float f_pos )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_POSITION)
 {
-  libvlc_media_player_set_position(libvlc_par_media_player(1), (float)hb_parnd(2));
+  libvlc_media_player_set_position(libvlc_par_media_player(1), libvlc_par_float(2));
 }
 
 // LIBVLC_API void libvlc_media_player_set_chapter( libvlc_media_player_t *p_mi, int i_chapter )
@@ -257,7 +257,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_RATE)
 // LIBVLC_API int libvlc_media_player_set_rate( libvlc_media_player_t *p_mi, float rate )
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_RATE)
 {
-  libvlc_ret_int(libvlc_media_player_set_rate(libvlc_par_media_player(1), (float)hb_parnd(2)));
+  libvlc_ret_int(libvlc_media_player_set_rate(libvlc_par_media_player(1), libvlc_par_float(2)));
 }
 
 // LIBVLC_API libvlc_state_t libvlc_media_player_get_state( libvlc_media_player_t *p_mi )
@@ -381,7 +381,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_SCALE)
 // LIBVLC_API void libvlc_video_set_scale( libvlc_media_player_t *p_mi, float f_factor )
 HB_FUNC(LIBVLC_VIDEO_SET_SCALE)
 {
-  libvlc_video_set_scale(libvlc_par_media_player(1), (float)hb_parnd(2));
+  libvlc_video_set_scale(libvlc_par_media_player(1), libvlc_par_float(2));
 }
 
 // LIBVLC_API char *libvlc_video_get_aspect_ratio( libvlc_media_player_t *p_mi )
@@ -551,7 +551,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_ADJUST_FLOAT)
 // LIBVLC_API void libvlc_video_set_adjust_float( libvlc_media_player_t *p_mi, unsigned option, float value )
 HB_FUNC(LIBVLC_VIDEO_SET_ADJUST_FLOAT)
 {
-  libvlc_video_set_adjust_float(libvlc_par_media_player(1), libvlc_par_unsigned(2), (float)hb_parnd(3));
+  libvlc_video_set_adjust_float(libvlc_par_media_player(1), libvlc_par_unsigned(2), libvlc_par_float(3));
 }
 
 // LIBVLC_API libvlc_audio_output_t * libvlc_audio_output_list_get( libvlc_instance_t *p_instance )
@@ -713,7 +713,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_RELEASE)
 // LIBVLC_API int libvlc_audio_equalizer_set_preamp( libvlc_equalizer_t *p_equalizer, float f_preamp )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_SET_PREAMP)
 {
-  libvlc_ret_int(libvlc_audio_equalizer_set_preamp(libvlc_par_equalizer(1), (float)hb_parnd(2)));
+  libvlc_ret_int(libvlc_audio_equalizer_set_preamp(libvlc_par_equalizer(1), libvlc_par_float(2)));
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_preamp( libvlc_equalizer_t *p_equalizer )
@@ -725,7 +725,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PREAMP)
 // LIBVLC_API int libvlc_audio_equalizer_set_amp_at_index( libvlc_equalizer_t *p_equalizer, float f_amp, unsigned u_band )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_SET_AMP_AT_INDEX)
 {
-  libvlc_ret_int(libvlc_audio_equalizer_set_amp_at_index(libvlc_par_equalizer(1), (float)hb_parnd(2), libvlc_par_unsigned(3)));
+  libvlc_ret_int(libvlc_audio_equalizer_set_amp_at_index(libvlc_par_equalizer(1), libvlc_par_float(2), libvlc_par_unsigned(3)));
 }
 
 // LIBVLC_API float libvlc_audio_equalizer_get_amp_at_index( libvlc_equalizer_t *p_equalizer, unsigned u_band )
