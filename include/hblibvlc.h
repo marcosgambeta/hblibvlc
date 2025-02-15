@@ -17,4 +17,7 @@
 #define libvlc_par_unsigned(n) (unsigned)hb_parni(n)
 #define libvlc_par_event_type(n) (libvlc_event_type_t)hb_parni(n)
 
+// macros for return
+#define libvlc_ret_int(x) hb_retni(x)
+
 #endif // HBLIBVLC_H

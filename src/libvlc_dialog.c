@@ -27,11 +27,11 @@ HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 // LIBVLC_API int libvlc_dialog_post_action(libvlc_dialog_id *p_id, int i_action)
 HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
 {
-  hb_retni(libvlc_dialog_post_action((libvlc_dialog_id *)hb_parptr(1), hb_parni(2)));
+  libvlc_ret_int(libvlc_dialog_post_action((libvlc_dialog_id *)hb_parptr(1), hb_parni(2)));
 }
 
 // LIBVLC_API int libvlc_dialog_dismiss(libvlc_dialog_id *p_id)
 HB_FUNC(LIBVLC_DIALOG_DISMISS)
 {
-  hb_retni(libvlc_dialog_dismiss((libvlc_dialog_id *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_dialog_dismiss((libvlc_dialog_id *)hb_parptr(1)));
 }

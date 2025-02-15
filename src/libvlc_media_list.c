@@ -41,25 +41,25 @@ HB_FUNC(LIBVLC_MEDIA_LIST_MEDIA)
 // LIBVLC_API int libvlc_media_list_add_media( libvlc_media_list_t *p_ml, libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_LIST_ADD_MEDIA)
 {
-  hb_retni(libvlc_media_list_add_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
+  libvlc_ret_int(libvlc_media_list_add_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
 }
 
 // LIBVLC_API int libvlc_media_list_insert_media( libvlc_media_list_t *p_ml, libvlc_media_t *p_md, int i_pos )
 HB_FUNC(LIBVLC_MEDIA_LIST_INSERT_MEDIA)
 {
-  hb_retni(libvlc_media_list_insert_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2), hb_parni(3)));
+  libvlc_ret_int(libvlc_media_list_insert_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2), hb_parni(3)));
 }
 
 // LIBVLC_API int libvlc_media_list_remove_index( libvlc_media_list_t *p_ml, int i_pos )
 HB_FUNC(LIBVLC_MEDIA_LIST_REMOVE_INDEX)
 {
-  hb_retni(libvlc_media_list_remove_index((libvlc_media_list_t *)hb_parptr(1), hb_parni(2)));
+  libvlc_ret_int(libvlc_media_list_remove_index((libvlc_media_list_t *)hb_parptr(1), hb_parni(2)));
 }
 
 // LIBVLC_API int libvlc_media_list_count( libvlc_media_list_t *p_ml )
 HB_FUNC(LIBVLC_MEDIA_LIST_COUNT)
 {
-  hb_retni(libvlc_media_list_count((libvlc_media_list_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_list_count((libvlc_media_list_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API libvlc_media_t * libvlc_media_list_item_at_index( libvlc_media_list_t *p_ml, int i_pos )
@@ -71,13 +71,13 @@ HB_FUNC(LIBVLC_MEDIA_LIST_ITEM_AT_INDEX)
 // LIBVLC_API int libvlc_media_list_index_of_item( libvlc_media_list_t *p_ml, libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_LIST_INDEX_OF_ITEM)
 {
-  hb_retni(libvlc_media_list_index_of_item((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
+  libvlc_ret_int(libvlc_media_list_index_of_item((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
 }
 
 // LIBVLC_API int libvlc_media_list_is_readonly( libvlc_media_list_t * p_ml )
 HB_FUNC(LIBVLC_MEDIA_LIST_IS_READONLY)
 {
-  hb_retni(libvlc_media_list_is_readonly((libvlc_media_list_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_list_is_readonly((libvlc_media_list_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API void libvlc_media_list_lock( libvlc_media_list_t *p_ml )

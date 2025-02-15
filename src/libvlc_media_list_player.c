@@ -71,7 +71,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_PAUSE)
 // LIBVLC_API int libvlc_media_list_player_is_playing( libvlc_media_list_player_t * p_mlp )
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_IS_PLAYING)
 {
-  hb_retni(libvlc_media_list_player_is_playing((libvlc_media_list_player_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_list_player_is_playing((libvlc_media_list_player_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API libvlc_state_t libvlc_media_list_player_get_state( libvlc_media_list_player_t * p_mlp )
@@ -83,13 +83,13 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_GET_STATE)
 // LIBVLC_API int libvlc_media_list_player_play_item_at_index(libvlc_media_list_player_t * p_mlp, int i_index)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PLAY_ITEM_AT_INDEX)
 {
-  hb_retni(libvlc_media_list_player_play_item_at_index((libvlc_media_list_player_t *)hb_parptr(1), hb_parni(2)));
+  libvlc_ret_int(libvlc_media_list_player_play_item_at_index((libvlc_media_list_player_t *)hb_parptr(1), hb_parni(2)));
 }
 
 // LIBVLC_API int libvlc_media_list_player_play_item(libvlc_media_list_player_t * p_mlp, libvlc_media_t * p_md)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PLAY_ITEM)
 {
-  hb_retni(libvlc_media_list_player_play_item((libvlc_media_list_player_t *)hb_parptr(1), libvlc_par_media(2)));
+  libvlc_ret_int(libvlc_media_list_player_play_item((libvlc_media_list_player_t *)hb_parptr(1), libvlc_par_media(2)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_stop( libvlc_media_list_player_t * p_mlp)
@@ -101,13 +101,13 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_STOP)
 // LIBVLC_API int libvlc_media_list_player_next(libvlc_media_list_player_t * p_mlp)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_NEXT)
 {
-  hb_retni(libvlc_media_list_player_next((libvlc_media_list_player_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_list_player_next((libvlc_media_list_player_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API int libvlc_media_list_player_previous(libvlc_media_list_player_t * p_mlp)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PREVIOUS)
 {
-  hb_retni(libvlc_media_list_player_previous((libvlc_media_list_player_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_list_player_previous((libvlc_media_list_player_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_set_playback_mode(libvlc_media_list_player_t * p_mlp, libvlc_playback_mode_t e_mode )

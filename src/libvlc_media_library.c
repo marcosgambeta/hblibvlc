@@ -29,7 +29,7 @@ HB_FUNC(LIBVLC_MEDIA_LIBRARY_RETAIN)
 // LIBVLC_API int libvlc_media_library_load( libvlc_media_library_t * p_mlib )
 HB_FUNC(LIBVLC_MEDIA_LIBRARY_LOAD)
 {
-  hb_retni(libvlc_media_library_load((libvlc_media_library_t *)hb_parptr(1)));
+  libvlc_ret_int(libvlc_media_library_load((libvlc_media_library_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API libvlc_media_list_t * libvlc_media_library_media_list( libvlc_media_library_t * p_mlib )
