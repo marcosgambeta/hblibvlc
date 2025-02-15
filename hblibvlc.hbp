@@ -7,6 +7,7 @@
 -i${LIBVLC_INC_DIR}
 
 src/libvlc.c
+src/libvlc_dialog.c
 src/libvlc_media.c
 src/libvlc_media_discoverer.c
 src/libvlc_media_library.c
