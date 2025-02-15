@@ -27,7 +27,7 @@ HB_FUNC(LIBVLC_CLEARERR)
 // LIBVLC_API libvlc_instance_t * libvlc_new( int argc , const char *const *argv )
 HB_FUNC(LIBVLC_NEW)
 {
-  hb_retptr((libvlc_instance_t *)libvlc_new(hb_parni(1), NULL));
+  hb_retptr((libvlc_instance_t *)libvlc_new(libvlc_par_int(1), NULL));
 }
 
 // LIBVLC_API void libvlc_release( libvlc_instance_t *p_instance )
