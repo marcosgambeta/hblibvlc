@@ -41,7 +41,7 @@ PROCEDURE Main()
 
    hwnd := waCreateWindowEx(0, ;
                             CLASS_NAME, ;
-                            "Testing Harbour++ and WinApi", ;
+                            "Testing Harbour++ and hblibvlc", ;
                             WS_OVERLAPPEDWINDOW, ;
                             CW_USEDEFAULT, ;
                             CW_USEDEFAULT, ;
