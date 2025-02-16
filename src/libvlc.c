@@ -131,5 +131,5 @@ HB_FUNC(LIBVLC_VIDEO_FILTER_LIST_GET)
 // LIBVLC_API int64_t libvlc_clock(void)
 HB_FUNC(LIBVLC_CLOCK)
 {
-  hb_retnl(libvlc_clock());
+  libvlc_ret_int64(libvlc_clock());
 }

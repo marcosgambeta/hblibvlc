@@ -26,5 +26,6 @@
 #define libvlc_ret_float(x) hb_retnd(x)
 #define libvlc_ret_instance(x) hb_retptr(x)
 #define libvlc_ret_module_description(x) hb_retptr(x)
+#define libvlc_ret_int64(x) hb_retnl(x) // TODO: fix
 
 #endif // HBLIBVLC_H
