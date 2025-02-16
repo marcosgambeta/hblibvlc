@@ -11,19 +11,19 @@
 // LIBVLC_API libvlc_media_t *libvlc_media_new_location(libvlc_instance_t *p_instance, const char * psz_mrl )
 HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_location(libvlc_par_instance(1), hb_parc(2)));
+  libvlc_ret_media(libvlc_media_new_location(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API libvlc_media_t *libvlc_media_new_path(libvlc_instance_t *p_instance, const char *path)
 HB_FUNC(LIBVLC_MEDIA_NEW_PATH)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_path(libvlc_par_instance(1), hb_parc(2)));
+  libvlc_ret_media(libvlc_media_new_path(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API libvlc_media_t *libvlc_media_new_fd(libvlc_instance_t *p_instance, int fd)
 HB_FUNC(LIBVLC_MEDIA_NEW_FD)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_fd(libvlc_par_instance(1), libvlc_par_int(2)));
+  libvlc_ret_media(libvlc_media_new_fd(libvlc_par_instance(1), libvlc_par_int(2)));
 }
 
 // LIBVLC_API libvlc_media_t *libvlc_media_new_callbacks(libvlc_instance_t *instance, libvlc_media_open_cb open_cb, libvlc_media_read_cb read_cb, libvlc_media_seek_cb seek_cb, libvlc_media_close_cb close_cb, void *opaque)
@@ -31,7 +31,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_FD)
 // LIBVLC_API libvlc_media_t *libvlc_media_new_as_node(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_MEDIA_NEW_AS_NODE)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_new_as_node(libvlc_par_instance(1), hb_parc(2)));
+  libvlc_ret_media(libvlc_media_new_as_node(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_media_add_option(libvlc_media_t *p_md, const char * psz_options)
@@ -63,7 +63,7 @@ HB_FUNC(LIBVLC_MEDIA_RELEASE)
 // LIBVLC_API libvlc_media_t *libvlc_media_duplicate( libvlc_media_t *p_md )
 HB_FUNC(LIBVLC_MEDIA_DUPLICATE)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_duplicate(libvlc_par_media(1)));
+  libvlc_ret_media(libvlc_media_duplicate(libvlc_par_media(1)));
 }
 
 // LIBVLC_API char *libvlc_media_get_meta( libvlc_media_t *p_md, libvlc_meta_t e_meta )

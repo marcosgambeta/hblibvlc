@@ -35,7 +35,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_SET_MEDIA)
 // LIBVLC_API libvlc_media_t * libvlc_media_list_media( libvlc_media_list_t *p_ml )
 HB_FUNC(LIBVLC_MEDIA_LIST_MEDIA)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_list_media((libvlc_media_list_t *)hb_parptr(1)));
+  libvlc_ret_media(libvlc_media_list_media((libvlc_media_list_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API int libvlc_media_list_add_media( libvlc_media_list_t *p_ml, libvlc_media_t *p_md )
@@ -65,7 +65,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_COUNT)
 // LIBVLC_API libvlc_media_t * libvlc_media_list_item_at_index( libvlc_media_list_t *p_ml, int i_pos )
 HB_FUNC(LIBVLC_MEDIA_LIST_ITEM_AT_INDEX)
 {
-  hb_retptr((libvlc_media_t *)libvlc_media_list_item_at_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
+  libvlc_ret_media(libvlc_media_list_item_at_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
 }
 
 // LIBVLC_API int libvlc_media_list_index_of_item( libvlc_media_list_t *p_ml, libvlc_media_t *p_md )
