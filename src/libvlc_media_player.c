@@ -711,13 +711,13 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_BAND_FREQUENCY)
 // LIBVLC_API libvlc_equalizer_t *libvlc_audio_equalizer_new( void )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_NEW)
 {
-  hb_retptr((libvlc_equalizer_t *)libvlc_audio_equalizer_new());
+  libvlc_ret_equalizer(libvlc_audio_equalizer_new());
 }
 
 // LIBVLC_API libvlc_equalizer_t *libvlc_audio_equalizer_new_from_preset( unsigned u_index )
 HB_FUNC(LIBVLC_AUDIO_EQUALIZER_NEW_FROM_PRESET)
 {
-  hb_retptr((libvlc_equalizer_t *)libvlc_audio_equalizer_new_from_preset(libvlc_par_unsigned(1)));
+  libvlc_ret_equalizer(libvlc_audio_equalizer_new_from_preset(libvlc_par_unsigned(1)));
 }
 
 // LIBVLC_API void libvlc_audio_equalizer_release( libvlc_equalizer_t *p_equalizer )
