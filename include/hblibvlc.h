@@ -19,6 +19,7 @@
 #define libvlc_par_float(n) (float)hb_parnd(n)
 #define libvlc_par_int(n) hb_parni(n)
 #define libvlc_par_dialog_id(n) (libvlc_dialog_id *)hb_parptr(n)
+#define libvlc_par_int64(n) (int64_t)hb_parnl(n) // TODO: fix
 
 // macros for return
 #define libvlc_ret_int(x) hb_retni(x)
