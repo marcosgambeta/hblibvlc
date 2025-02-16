@@ -123,7 +123,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_XWINDOW)
 // LIBVLC_API void libvlc_media_player_set_hwnd(libvlc_media_player_t *p_mi, void *drawable)
 HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_HWND)
 {
-  libvlc_media_player_set_hwnd(libvlc_par_media_player(1), HB_ISPOINTER(2) ? (void *)hb_parptr(2) : (void *)hb_parnl(2));
+  libvlc_media_player_set_hwnd(libvlc_par_media_player(1), HB_ISPOINTER(2) ? (void *)hb_parptr(2) : (void *)hb_parnint(2));
 }
 
 // LIBVLC_API void *libvlc_media_player_get_hwnd(libvlc_media_player_t *p_mi)
