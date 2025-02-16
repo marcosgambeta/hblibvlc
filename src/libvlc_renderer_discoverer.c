@@ -44,36 +44,36 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
   libvlc_ret_int(libvlc_renderer_item_flags((const libvlc_renderer_item_t *)hb_parptr(1)));
 }
 
-// LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new( libvlc_instance_t *p_inst, const char *psz_name )
+// LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new(libvlc_instance_t *p_inst, const char *psz_name)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 {
   hb_retptr((libvlc_renderer_discoverer_t *)libvlc_renderer_discoverer_new(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API void libvlc_renderer_discoverer_release( libvlc_renderer_discoverer_t *p_rd )
+// LIBVLC_API void libvlc_renderer_discoverer_release(libvlc_renderer_discoverer_t *p_rd)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_RELEASE)
 {
   libvlc_renderer_discoverer_release((libvlc_renderer_discoverer_t *)hb_parptr(1));
 }
 
-// LIBVLC_API int libvlc_renderer_discoverer_start( libvlc_renderer_discoverer_t *p_rd )
+// LIBVLC_API int libvlc_renderer_discoverer_start(libvlc_renderer_discoverer_t *p_rd)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_START)
 {
   libvlc_ret_int(libvlc_renderer_discoverer_start((libvlc_renderer_discoverer_t *)hb_parptr(1)));
 }
 
-// LIBVLC_API void libvlc_renderer_discoverer_stop( libvlc_renderer_discoverer_t *p_rd )
+// LIBVLC_API void libvlc_renderer_discoverer_stop(libvlc_renderer_discoverer_t *p_rd)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_STOP)
 {
   libvlc_renderer_discoverer_stop((libvlc_renderer_discoverer_t *)hb_parptr(1));
 }
 
-// LIBVLC_API libvlc_event_manager_t * libvlc_renderer_discoverer_event_manager( libvlc_renderer_discoverer_t *p_rd )
+// LIBVLC_API libvlc_event_manager_t * libvlc_renderer_discoverer_event_manager(libvlc_renderer_discoverer_t *p_rd)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_EVENT_MANAGER)
 {
   hb_retptr((libvlc_event_manager_t *)libvlc_renderer_discoverer_event_manager((libvlc_renderer_discoverer_t *)hb_parptr(1)));
 }
 
-// LIBVLC_API size_t libvlc_renderer_discoverer_list_get( libvlc_instance_t *p_inst, libvlc_rd_description_t ***ppp_services )
+// LIBVLC_API size_t libvlc_renderer_discoverer_list_get(libvlc_instance_t *p_inst, libvlc_rd_description_t ***ppp_services)
 
-// LIBVLC_API void libvlc_renderer_discoverer_list_release( libvlc_rd_description_t **pp_services, size_t i_count )
+// LIBVLC_API void libvlc_renderer_discoverer_list_release(libvlc_rd_description_t **pp_services, size_t i_count)

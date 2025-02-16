@@ -8,13 +8,13 @@
 #include <hbapi.h>
 #include "hblibvlc.h"
 
-// LIBVLC_API void libvlc_vlm_release( libvlc_instance_t *p_instance )
+// LIBVLC_API void libvlc_vlm_release(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_VLM_RELEASE)
 {
   libvlc_vlm_release(libvlc_par_instance(1));
 }
 
-// LIBVLC_API int libvlc_vlm_add_broadcast( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input, const char *psz_output, int i_options, const char * const* ppsz_options, int b_enabled, int b_loop )
+// LIBVLC_API int libvlc_vlm_add_broadcast(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input, const char *psz_output, int i_options, const char * const* ppsz_options, int b_enabled, int b_loop)
 #if 0
 HB_FUNC(LIBVLC_VLM_ADD_BROADCAST)
 {
@@ -22,7 +22,7 @@ HB_FUNC(LIBVLC_VLM_ADD_BROADCAST)
 }
 #endif
 
-// LIBVLC_API int libvlc_vlm_add_vod( libvlc_instance_t * p_instance, const char *psz_name, const char *psz_input, int i_options, const char * const* ppsz_options, int b_enabled, const char *psz_mux )
+// LIBVLC_API int libvlc_vlm_add_vod(libvlc_instance_t * p_instance, const char *psz_name, const char *psz_input, int i_options, const char * const* ppsz_options, int b_enabled, const char *psz_mux)
 #if 0
 HB_FUNC(LIBVLC_VLM_ADD_VOD)
 {
@@ -30,49 +30,49 @@ HB_FUNC(LIBVLC_VLM_ADD_VOD)
 }
 #endif
 
-// LIBVLC_API int libvlc_vlm_del_media( libvlc_instance_t * p_instance, const char *psz_name )
+// LIBVLC_API int libvlc_vlm_del_media(libvlc_instance_t * p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_DEL_MEDIA)
 {
   libvlc_ret_int(libvlc_vlm_del_media(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API int libvlc_vlm_set_enabled( libvlc_instance_t *p_instance, const char *psz_name, int b_enabled )
+// LIBVLC_API int libvlc_vlm_set_enabled(libvlc_instance_t *p_instance, const char *psz_name, int b_enabled)
 HB_FUNC(LIBVLC_VLM_SET_ENABLED)
 {
   libvlc_ret_int(libvlc_vlm_set_enabled(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_set_output( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_output )
+// LIBVLC_API int libvlc_vlm_set_output(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_output)
 HB_FUNC(LIBVLC_VLM_SET_OUTPUT)
 {
   libvlc_ret_int(libvlc_vlm_set_output(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_set_input( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input )
+// LIBVLC_API int libvlc_vlm_set_input(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input)
 HB_FUNC(LIBVLC_VLM_SET_INPUT)
 {
   libvlc_ret_int(libvlc_vlm_set_input(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_add_input( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input )
+// LIBVLC_API int libvlc_vlm_add_input(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input)
 HB_FUNC(LIBVLC_VLM_ADD_INPUT)
 {
   libvlc_ret_int(libvlc_vlm_add_input(libvlc_par_instance(1), hb_parc(3), hb_parc(4)));
 }
 
-// LIBVLC_API int libvlc_vlm_set_loop( libvlc_instance_t *p_instance, const char *psz_name, int b_loop )
+// LIBVLC_API int libvlc_vlm_set_loop(libvlc_instance_t *p_instance, const char *psz_name, int b_loop)
 HB_FUNC(LIBVLC_VLM_SET_LOOP)
 {
   libvlc_ret_int(libvlc_vlm_set_loop(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_set_mux( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_mux )
+// LIBVLC_API int libvlc_vlm_set_mux(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_mux)
 HB_FUNC(LIBVLC_VLM_SET_MUX)
 {
   libvlc_ret_int(libvlc_vlm_set_mux(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_change_media( libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input, const char *psz_output, int i_options, const char * const *ppsz_options, int b_enabled, int b_loop )
+// LIBVLC_API int libvlc_vlm_change_media(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input, const char *psz_output, int i_options, const char * const *ppsz_options, int b_enabled, int b_loop)
 #if 0
 HB_FUNC(LIBVLC_VLM_CHANGE_MEDIA)
 {
@@ -80,67 +80,67 @@ HB_FUNC(LIBVLC_VLM_CHANGE_MEDIA)
 }
 #endif
 
-// LIBVLC_API int libvlc_vlm_play_media ( libvlc_instance_t *p_instance, const char *psz_name )
+// LIBVLC_API int libvlc_vlm_play_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_PLAY_MEDIA)
 {
   libvlc_ret_int(libvlc_vlm_play_media(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API int libvlc_vlm_stop_media ( libvlc_instance_t *p_instance, const char *psz_name )
+// LIBVLC_API int libvlc_vlm_stop_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_STOP_MEDIA)
 {
   libvlc_ret_int(libvlc_vlm_stop_media(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API int libvlc_vlm_pause_media( libvlc_instance_t *p_instance, const char *psz_name )
+// LIBVLC_API int libvlc_vlm_pause_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_PAUSE_MEDIA)
 {
   libvlc_ret_int(libvlc_vlm_pause_media(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API int libvlc_vlm_seek_media( libvlc_instance_t *p_instance, const char *psz_name, float f_percentage )
+// LIBVLC_API int libvlc_vlm_seek_media(libvlc_instance_t *p_instance, const char *psz_name, float f_percentage)
 HB_FUNC(LIBVLC_VLM_SEEK_MEDIA)
 {
   libvlc_ret_int(libvlc_vlm_seek_media(libvlc_par_instance(1), hb_parc(2), libvlc_par_float(3)));
 }
 
-// LIBVLC_API const char* libvlc_vlm_show_media( libvlc_instance_t *p_instance, const char *psz_name )
+// LIBVLC_API const char* libvlc_vlm_show_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_SHOW_MEDIA)
 {
   hb_retc((const char *)libvlc_vlm_show_media(libvlc_par_instance(1), hb_parc(2)));
 }
 
-// LIBVLC_API float libvlc_vlm_get_media_instance_position( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
+// LIBVLC_API float libvlc_vlm_get_media_instance_position(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_POSITION)
 {
   libvlc_ret_float(libvlc_vlm_get_media_instance_position(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_get_media_instance_time( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
+// LIBVLC_API int libvlc_vlm_get_media_instance_time(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_TIME)
 {
   libvlc_ret_int(libvlc_vlm_get_media_instance_time(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_get_media_instance_length( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
+// LIBVLC_API int libvlc_vlm_get_media_instance_length(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_LENGTH)
 {
   libvlc_ret_int(libvlc_vlm_get_media_instance_length(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
-// LIBVLC_API int libvlc_vlm_get_media_instance_rate( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
+// LIBVLC_API int libvlc_vlm_get_media_instance_rate(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_RATE)
 {
   libvlc_ret_int(libvlc_vlm_get_media_instance_rate(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
 }
 
 #if 0
-// LIBVLC_API int libvlc_vlm_get_media_instance_title( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
-// LIBVLC_API int libvlc_vlm_get_media_instance_chapter( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
-// LIBVLC_API int libvlc_vlm_get_media_instance_seekable( libvlc_instance_t *p_instance, const char *psz_name, int i_instance )
+// LIBVLC_API int libvlc_vlm_get_media_instance_title(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
+// LIBVLC_API int libvlc_vlm_get_media_instance_chapter(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
+// LIBVLC_API int libvlc_vlm_get_media_instance_seekable(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 #endif
 
-// LIBVLC_API libvlc_event_manager_t * libvlc_vlm_get_event_manager( libvlc_instance_t *p_instance )
+// LIBVLC_API libvlc_event_manager_t * libvlc_vlm_get_event_manager(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_VLM_GET_EVENT_MANAGER)
 {
   hb_retptr((libvlc_event_manager_t *)libvlc_vlm_get_event_manager(libvlc_par_instance(1)));
