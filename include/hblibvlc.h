@@ -41,5 +41,6 @@
 #define libvlc_ret_video_viewpoint(x) hb_retptr(x)
 #define libvlc_ret_track_description(x) hb_retptr(x)
 #define libvlc_ret_audio_output(x) hb_retptr(x)
+#define libvlc_ret_audio_output_device(x) hb_retptr(x)
 
 #endif // HBLIBVLC_H

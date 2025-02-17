@@ -597,13 +597,13 @@ HB_FUNC(LIBVLC_AUDIO_OUTPUT_SET)
 // LIBVLC_API libvlc_audio_output_device_t * libvlc_audio_output_device_enum(libvlc_media_player_t *mp)
 HB_FUNC(LIBVLC_AUDIO_OUTPUT_DEVICE_ENUM)
 {
-  hb_retptr((libvlc_audio_output_device_t *)libvlc_audio_output_device_enum(libvlc_par_media_player(1)));
+  libvlc_ret_audio_output_device(libvlc_audio_output_device_enum(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API libvlc_audio_output_device_t * libvlc_audio_output_device_list_get(libvlc_instance_t *p_instance, const char *aout)
 HB_FUNC(LIBVLC_AUDIO_OUTPUT_DEVICE_LIST_GET)
 {
-  hb_retptr((libvlc_audio_output_device_t *)libvlc_audio_output_device_list_get(libvlc_par_instance(1), hb_parc(2)));
+  libvlc_ret_audio_output_device(libvlc_audio_output_device_list_get(libvlc_par_instance(1), hb_parc(2)));
 }
 
 // LIBVLC_API void libvlc_audio_output_device_list_release(libvlc_audio_output_device_t *p_list)
