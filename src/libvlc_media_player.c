@@ -401,7 +401,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_ASPECT_RATIO)
 // LIBVLC_API libvlc_video_viewpoint_t *libvlc_video_new_viewpoint(void)
 HB_FUNC(LIBVLC_VIDEO_NEW_VIEWPOINT)
 {
-  hb_retptr((libvlc_video_viewpoint_t *)libvlc_video_new_viewpoint());
+  libvlc_ret_video_viewpoint(libvlc_video_new_viewpoint());
 }
 
 // LIBVLC_API int libvlc_video_update_viewpoint(libvlc_media_player_t *p_mi, const libvlc_video_viewpoint_t *p_viewpoint, bool b_absolute)
