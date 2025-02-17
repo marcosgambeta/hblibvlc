@@ -19,7 +19,7 @@ HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
 // LIBVLC_API void * libvlc_dialog_get_context(libvlc_dialog_id *p_id)
 HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 {
-  hb_retptr((void *)libvlc_dialog_get_context(libvlc_par_dialog_id(1)));
+  libvlc_ret_voidptr(libvlc_dialog_get_context(libvlc_par_dialog_id(1)));
 }
 
 // LIBVLC_API int libvlc_dialog_post_login(libvlc_dialog_id *p_id, const char *psz_username, const char *psz_password, bool b_store)

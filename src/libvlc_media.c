@@ -137,7 +137,7 @@ HB_FUNC(LIBVLC_MEDIA_SET_USER_DATA)
 // LIBVLC_API void *libvlc_media_get_user_data(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_USER_DATA)
 {
-  hb_retptr((void *)libvlc_media_get_user_data(libvlc_par_media(1)));
+  libvlc_ret_voidptr(libvlc_media_get_user_data(libvlc_par_media(1)));
 }
 
 // LIBVLC_API unsigned libvlc_media_tracks_get(libvlc_media_t *p_md, libvlc_media_track_t ***tracks)

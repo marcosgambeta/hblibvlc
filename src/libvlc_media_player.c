@@ -105,7 +105,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_NSOBJECT)
 // LIBVLC_API void * libvlc_media_player_get_nsobject(libvlc_media_player_t *p_mi)
 HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_NSOBJECT)
 {
-  hb_retptr((void *)libvlc_media_player_get_nsobject(libvlc_par_media_player(1)));
+  libvlc_ret_voidptr(libvlc_media_player_get_nsobject(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API void libvlc_media_player_set_xwindow(libvlc_media_player_t *p_mi, uint32_t drawable)
@@ -129,7 +129,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_HWND)
 // LIBVLC_API void *libvlc_media_player_get_hwnd(libvlc_media_player_t *p_mi)
 HB_FUNC(LIBVLC_MEDIA_PLAYER_GET_HWND)
 {
-  hb_retptr((void *)libvlc_media_player_get_hwnd(libvlc_par_media_player(1)));
+  libvlc_ret_voidptr(libvlc_media_player_get_hwnd(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API void libvlc_media_player_set_android_context(libvlc_media_player_t *p_mi, void *p_awindow_handler)
