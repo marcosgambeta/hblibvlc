@@ -579,7 +579,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_ADJUST_FLOAT)
 // LIBVLC_API libvlc_audio_output_t * libvlc_audio_output_list_get(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_AUDIO_OUTPUT_LIST_GET)
 {
-  hb_retptr((libvlc_audio_output_t *)libvlc_audio_output_list_get(libvlc_par_instance(1)));
+  libvlc_ret_audio_output(libvlc_audio_output_list_get(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API void libvlc_audio_output_list_release(libvlc_audio_output_t *p_list)
