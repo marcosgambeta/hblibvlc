@@ -59,6 +59,10 @@ HB_FUNC(LIBVLC_MEDIA_RELEASE)
 }
 
 // LIBVLC_API char *libvlc_media_get_mrl(libvlc_media_t *p_md)
+HB_FUNC(LIBVLC_MEDIA_GET_MRL) // TOCHECK: release string ?
+{
+  hb_retc(libvlc_media_get_mrl(libvlc_par_media(1)));
+}
 
 // LIBVLC_API libvlc_media_t *libvlc_media_duplicate(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_DUPLICATE)
@@ -67,6 +71,10 @@ HB_FUNC(LIBVLC_MEDIA_DUPLICATE)
 }
 
 // LIBVLC_API char *libvlc_media_get_meta(libvlc_media_t *p_md, libvlc_meta_t e_meta)
+HB_FUNC(LIBVLC_MEDIA_GET_META) // TOCHECK: release string ?
+{
+  hb_retc(libvlc_media_get_meta(libvlc_par_media(1), (libvlc_meta_t)hb_parni(2)));
+}
 
 // LIBVLC_API void libvlc_media_set_meta(libvlc_media_t *p_md, libvlc_meta_t e_meta, const char *psz_value)
 HB_FUNC(LIBVLC_MEDIA_SET_META)
