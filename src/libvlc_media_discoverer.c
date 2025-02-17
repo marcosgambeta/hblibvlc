@@ -35,7 +35,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_RELEASE)
 // LIBVLC_API libvlc_media_list_t * libvlc_media_discoverer_media_list(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_MEDIA_LIST)
 {
-  hb_retptr((libvlc_media_list_t *)libvlc_media_discoverer_media_list((libvlc_media_discoverer_t *)hb_parptr(1)));
+  libvlc_ret_media_list(libvlc_media_discoverer_media_list((libvlc_media_discoverer_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API int libvlc_media_discoverer_is_running(libvlc_media_discoverer_t * p_mdis)

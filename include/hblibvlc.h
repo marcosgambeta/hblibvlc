@@ -34,5 +34,6 @@
 #define libvlc_ret_event_manager(x) hb_retptr(x)
 #define libvlc_ret_voidptr(x) hb_retptr(x)
 #define libvlc_ret_media_discoverer(x) hb_retptr(x)
+#define libvlc_ret_media_list(x) hb_retptr(x)
 
 #endif // HBLIBVLC_H
