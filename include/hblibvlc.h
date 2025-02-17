@@ -37,5 +37,6 @@
 #define libvlc_ret_media_list(x) hb_retptr(x)
 #define libvlc_ret_media_player(x) hb_retptr(x)
 #define libvlc_ret_media_library(x) hb_retptr(x)
+#define libvlc_ret_media_list_player(x) hb_retptr(x)
 
 #endif // HBLIBVLC_H

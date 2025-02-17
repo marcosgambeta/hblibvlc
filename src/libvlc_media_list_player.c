@@ -11,7 +11,7 @@
 // LIBVLC_API libvlc_media_list_player_t * libvlc_media_list_player_new(libvlc_instance_t * p_instance)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_NEW)
 {
-  hb_retptr((libvlc_media_list_player_t *)libvlc_media_list_player_new(libvlc_par_instance(1)));
+  libvlc_ret_media_list_player(libvlc_media_list_player_new(libvlc_par_instance(1)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_release(libvlc_media_list_player_t * p_mlp)
