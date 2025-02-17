@@ -90,7 +90,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_ADD_MEDIA)
 // LIBVLC_API int libvlc_media_list_insert_media(libvlc_media_list_t *p_ml, libvlc_media_t *p_md, int i_pos)
 HB_FUNC(LIBVLC_MEDIA_LIST_INSERT_MEDIA)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_media_list_insert_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2), libvlc_par_int(3)));
   }

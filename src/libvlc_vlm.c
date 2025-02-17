@@ -68,7 +68,7 @@ HB_FUNC(LIBVLC_VLM_DEL_MEDIA)
 // LIBVLC_API int libvlc_vlm_set_enabled(libvlc_instance_t *p_instance, const char *psz_name, int b_enabled)
 HB_FUNC(LIBVLC_VLM_SET_ENABLED)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_set_enabled(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }
@@ -81,7 +81,7 @@ HB_FUNC(LIBVLC_VLM_SET_ENABLED)
 // LIBVLC_API int libvlc_vlm_set_output(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_output)
 HB_FUNC(LIBVLC_VLM_SET_OUTPUT)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     libvlc_ret_int(libvlc_vlm_set_output(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
   }
@@ -94,7 +94,7 @@ HB_FUNC(LIBVLC_VLM_SET_OUTPUT)
 // LIBVLC_API int libvlc_vlm_set_input(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input)
 HB_FUNC(LIBVLC_VLM_SET_INPUT)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     libvlc_ret_int(libvlc_vlm_set_input(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
   }
@@ -120,7 +120,7 @@ HB_FUNC(LIBVLC_VLM_ADD_INPUT)
 // LIBVLC_API int libvlc_vlm_set_loop(libvlc_instance_t *p_instance, const char *psz_name, int b_loop)
 HB_FUNC(LIBVLC_VLM_SET_LOOP)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_set_loop(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }
@@ -133,7 +133,7 @@ HB_FUNC(LIBVLC_VLM_SET_LOOP)
 // LIBVLC_API int libvlc_vlm_set_mux(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_mux)
 HB_FUNC(LIBVLC_VLM_SET_MUX)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     libvlc_ret_int(libvlc_vlm_set_mux(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
   }
@@ -200,7 +200,7 @@ HB_FUNC(LIBVLC_VLM_PAUSE_MEDIA)
 // LIBVLC_API int libvlc_vlm_seek_media(libvlc_instance_t *p_instance, const char *psz_name, float f_percentage)
 HB_FUNC(LIBVLC_VLM_SEEK_MEDIA)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_seek_media(libvlc_par_instance(1), hb_parc(2), libvlc_par_float(3)));
   }
@@ -226,7 +226,7 @@ HB_FUNC(LIBVLC_VLM_SHOW_MEDIA)
 // LIBVLC_API float libvlc_vlm_get_media_instance_position(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_POSITION)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_float(libvlc_vlm_get_media_instance_position(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }
@@ -239,7 +239,7 @@ HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_POSITION)
 // LIBVLC_API int libvlc_vlm_get_media_instance_time(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_TIME)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_get_media_instance_time(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }
@@ -252,7 +252,7 @@ HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_TIME)
 // LIBVLC_API int libvlc_vlm_get_media_instance_length(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_LENGTH)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_get_media_instance_length(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }
@@ -265,7 +265,7 @@ HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_LENGTH)
 // LIBVLC_API int libvlc_vlm_get_media_instance_rate(libvlc_instance_t *p_instance, const char *psz_name, int i_instance)
 HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_RATE)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_vlm_get_media_instance_rate(libvlc_par_instance(1), hb_parc(2), libvlc_par_int(3)));
   }

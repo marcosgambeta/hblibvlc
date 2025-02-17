@@ -79,7 +79,7 @@ HB_FUNC(LIBVLC_MEDIA_ADD_OPTION)
 // LIBVLC_API void libvlc_media_add_option_flag(libvlc_media_t *p_md, const char * psz_options, unsigned i_flags)
 HB_FUNC(LIBVLC_MEDIA_ADD_OPTION_FLAG)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3))
   {
     libvlc_media_add_option_flag(libvlc_par_media(1), hb_parc(2), libvlc_par_unsigned(3));
   }
@@ -157,7 +157,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_META) // TOCHECK: release string ?
 // LIBVLC_API void libvlc_media_set_meta(libvlc_media_t *p_md, libvlc_meta_t e_meta, const char *psz_value)
 HB_FUNC(LIBVLC_MEDIA_SET_META)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISCHAR(3))
   {
     libvlc_media_set_meta(libvlc_par_media(1), (libvlc_meta_t)hb_parni(2), hb_parc(3));
   }
@@ -226,7 +226,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_DURATION)
 // LIBVLC_API int libvlc_media_parse_with_options(libvlc_media_t *p_md, libvlc_media_parse_flag_t parse_flag, int timeout)
 HB_FUNC(LIBVLC_MEDIA_PARSE_WITH_OPTIONS)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISNUM(3))
   {
     libvlc_ret_int(libvlc_media_parse_with_options(libvlc_par_media(1), (libvlc_media_parse_flag_t)hb_parni(2), libvlc_par_int(3)));
   }

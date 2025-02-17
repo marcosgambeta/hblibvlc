@@ -96,7 +96,7 @@ HB_FUNC(LIBVLC_ADD_INTF)
 // LIBVLC_API void libvlc_set_user_agent(libvlc_instance_t *p_instance, const char *name, const char *http)
 HB_FUNC(LIBVLC_SET_USER_AGENT)
 {
-  if (hb_pcount() == 3)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
     libvlc_set_user_agent(libvlc_par_instance(1), hb_parc(2), hb_parc(3));
   }
