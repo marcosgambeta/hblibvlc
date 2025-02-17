@@ -4,5 +4,5 @@ libpaths=${LIBVLC_LIB_DIR}
 libs=hblibvlc
 {win}libs=libvlc.dll
 {win}libs=libvlccore.dll
-{!win}libs=libvlc
-{!win}libs=libvlccore
+{!win}libs=vlc
+{!win}libs=vlccore
