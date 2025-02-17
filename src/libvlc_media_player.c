@@ -310,7 +310,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_EVAS_OBJECT)
 // LIBVLC_API void libvlc_audio_set_format(libvlc_media_player_t *mp, const char *format, unsigned rate, unsigned channels)
 HB_FUNC(LIBVLC_AUDIO_SET_FORMAT)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4))
   {
     libvlc_audio_set_format(libvlc_par_media_player(1), hb_parc(2), libvlc_par_unsigned(3), libvlc_par_unsigned(4));
   }
@@ -649,7 +649,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_VIDEO_TITLE_DISPLAY)
 #if 0
 HB_FUNC(LIBVLC_MEDIA_PLAYER_ADD_SLAVE)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISLOG(4))
   {
     libvlc_ret_int(libvlc_media_player_add_slave(libvlc_par_media_player(1), (libvlc_media_slave_type_t)hb_parni(2), hb_parc(3), (bool)hb_parl(4)));
   }
@@ -741,7 +741,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_MOUSE_INPUT)
 // LIBVLC_API int libvlc_video_get_size(libvlc_media_player_t *p_mi, unsigned num, unsigned *px, unsigned *py)
 HB_FUNC(LIBVLC_VIDEO_GET_SIZE)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     unsigned px;
     unsigned py;
@@ -758,7 +758,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_SIZE)
 // LIBVLC_API int libvlc_video_get_cursor(libvlc_media_player_t *p_mi, unsigned num, int *px, int *py)
 HB_FUNC(LIBVLC_VIDEO_GET_CURSOR)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISNUM(2) && (HB_ISNUM(3) || HB_ISNIL(3)) && (HB_ISNUM(4) || HB_ISNIL(4)))
   {
     int px;
     int py;

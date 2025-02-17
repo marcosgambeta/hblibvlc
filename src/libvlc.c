@@ -109,7 +109,7 @@ HB_FUNC(LIBVLC_SET_USER_AGENT)
 // LIBVLC_API void libvlc_set_app_id(libvlc_instance_t *p_instance, const char *id, const char *version, const char *icon)
 HB_FUNC(LIBVLC_SET_APP_ID)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
   {
     libvlc_set_app_id(libvlc_par_instance(1), hb_parc(2), hb_parc(3), hb_parc(4));
   }

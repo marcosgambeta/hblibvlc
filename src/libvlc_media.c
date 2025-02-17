@@ -321,7 +321,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_TYPE)
 // LIBVLC_API int libvlc_media_slaves_add(libvlc_media_t *p_md, libvlc_media_slave_type_t i_type, unsigned int i_priority, const char *psz_uri)
 HB_FUNC(LIBVLC_MEDIA_SLAVES_ADD)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISNUM(3) && HB_ISCHAR(4))
   {
     libvlc_ret_int(libvlc_media_slaves_add(libvlc_par_media(1), (libvlc_media_slave_type_t)hb_parni(2), libvlc_par_unsigned(3), hb_parc(4)));
   }

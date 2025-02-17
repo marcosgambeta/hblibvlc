@@ -107,9 +107,9 @@ HB_FUNC(LIBVLC_VLM_SET_INPUT)
 // LIBVLC_API int libvlc_vlm_add_input(libvlc_instance_t *p_instance, const char *psz_name, const char *psz_input)
 HB_FUNC(LIBVLC_VLM_ADD_INPUT)
 {
-  if (hb_pcount() == 4)
+  if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
   {
-    libvlc_ret_int(libvlc_vlm_add_input(libvlc_par_instance(1), hb_parc(3), hb_parc(4)));
+    libvlc_ret_int(libvlc_vlm_add_input(libvlc_par_instance(1), hb_parc(2), hb_parc(3)));
   }
   else
   {
