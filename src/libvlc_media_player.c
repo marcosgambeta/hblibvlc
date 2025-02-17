@@ -183,7 +183,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_SET_RENDERER)
 // LIBVLC_API void libvlc_video_set_format(libvlc_media_player_t *mp, const char *chroma, unsigned width, unsigned height, unsigned pitch)
 HB_FUNC(LIBVLC_VIDEO_SET_FORMAT)
 {
-  if (hb_pcount() == 5)
+  if (hb_pcount() == 5 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISNUM(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     libvlc_video_set_format(libvlc_par_media_player(1), hb_parc(2), libvlc_par_unsigned(3), libvlc_par_unsigned(4), libvlc_par_unsigned(5));
   }
@@ -1034,7 +1034,7 @@ HB_FUNC(LIBVLC_VIDEO_SET_TRACK)
 // LIBVLC_API int libvlc_video_take_snapshot(libvlc_media_player_t *p_mi, unsigned num, const char *psz_filepath, unsigned int i_width, unsigned int i_height)
 HB_FUNC(LIBVLC_VIDEO_TAKE_SNAPSHOT)
 {
-  if (hb_pcount() == 5)
+  if (hb_pcount() == 5 && HB_ISPOINTER(1) && HB_ISNUM(2) && HB_ISCHAR(3) && HB_ISNUM(4) && HB_ISNUM(5))
   {
     libvlc_ret_int(libvlc_video_take_snapshot(libvlc_par_media_player(1), libvlc_par_unsigned(2), hb_parc(3), (unsigned int)hb_parni(4), (unsigned int)hb_parni(5)));
   }
