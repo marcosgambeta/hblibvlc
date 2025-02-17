@@ -51,7 +51,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_RETAIN)
 // LIBVLC_API void libvlc_media_list_set_media(libvlc_media_list_t *p_ml, libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_LIST_SET_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
     libvlc_media_list_set_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2));
   }
@@ -77,7 +77,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_MEDIA)
 // LIBVLC_API int libvlc_media_list_add_media(libvlc_media_list_t *p_ml, libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_LIST_ADD_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
     libvlc_ret_int(libvlc_media_list_add_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
   }
@@ -103,7 +103,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_INSERT_MEDIA)
 // LIBVLC_API int libvlc_media_list_remove_index(libvlc_media_list_t *p_ml, int i_pos)
 HB_FUNC(LIBVLC_MEDIA_LIST_REMOVE_INDEX)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     libvlc_ret_int(libvlc_media_list_remove_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
   }
@@ -129,7 +129,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_COUNT)
 // LIBVLC_API libvlc_media_t * libvlc_media_list_item_at_index(libvlc_media_list_t *p_ml, int i_pos)
 HB_FUNC(LIBVLC_MEDIA_LIST_ITEM_AT_INDEX)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     libvlc_ret_media(libvlc_media_list_item_at_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
   }
@@ -142,7 +142,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_ITEM_AT_INDEX)
 // LIBVLC_API int libvlc_media_list_index_of_item(libvlc_media_list_t *p_ml, libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_LIST_INDEX_OF_ITEM)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
     libvlc_ret_int(libvlc_media_list_index_of_item((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
   }

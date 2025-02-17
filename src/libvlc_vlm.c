@@ -55,7 +55,7 @@ HB_FUNC(LIBVLC_VLM_ADD_VOD)
 // LIBVLC_API int libvlc_vlm_del_media(libvlc_instance_t * p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_DEL_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_int(libvlc_vlm_del_media(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -161,7 +161,7 @@ HB_FUNC(LIBVLC_VLM_CHANGE_MEDIA)
 // LIBVLC_API int libvlc_vlm_play_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_PLAY_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_int(libvlc_vlm_play_media(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -174,7 +174,7 @@ HB_FUNC(LIBVLC_VLM_PLAY_MEDIA)
 // LIBVLC_API int libvlc_vlm_stop_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_STOP_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_int(libvlc_vlm_stop_media(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -187,7 +187,7 @@ HB_FUNC(LIBVLC_VLM_STOP_MEDIA)
 // LIBVLC_API int libvlc_vlm_pause_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_PAUSE_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_int(libvlc_vlm_pause_media(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -213,7 +213,7 @@ HB_FUNC(LIBVLC_VLM_SEEK_MEDIA)
 // LIBVLC_API const char* libvlc_vlm_show_media(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_VLM_SHOW_MEDIA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     hb_retc((const char *)libvlc_vlm_show_media(libvlc_par_instance(1), hb_parc(2)));
   }

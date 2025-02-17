@@ -12,7 +12,7 @@
 // LIBVLC_API libvlc_media_discoverer_t * libvlc_media_discoverer_new(libvlc_instance_t * p_inst, const char * psz_name)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_media_discoverer(libvlc_media_discoverer_new(libvlc_par_instance(1), hb_parc(2)));
   }

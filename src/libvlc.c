@@ -42,7 +42,7 @@ HB_FUNC(LIBVLC_CLEARERR)
 // LIBVLC_API libvlc_instance_t * libvlc_new(int argc , const char *const *argv)
 HB_FUNC(LIBVLC_NEW)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISNUM(1) && HB_ISNIL(2))
   {
     libvlc_ret_instance(libvlc_new(libvlc_par_int(1), NULL));
   }
@@ -81,7 +81,7 @@ HB_FUNC(LIBVLC_RETAIN)
 // LIBVLC_API int libvlc_add_intf(libvlc_instance_t *p_instance, const char *name)
 HB_FUNC(LIBVLC_ADD_INTF)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_int(libvlc_add_intf(libvlc_par_instance(1), hb_parc(2)));
   }

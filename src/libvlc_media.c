@@ -12,7 +12,7 @@
 // LIBVLC_API libvlc_media_t *libvlc_media_new_location(libvlc_instance_t *p_instance, const char * psz_mrl)
 HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_media(libvlc_media_new_location(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -25,7 +25,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_LOCATION)
 // LIBVLC_API libvlc_media_t *libvlc_media_new_path(libvlc_instance_t *p_instance, const char *path)
 HB_FUNC(LIBVLC_MEDIA_NEW_PATH)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_media(libvlc_media_new_path(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -38,7 +38,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_PATH)
 // LIBVLC_API libvlc_media_t *libvlc_media_new_fd(libvlc_instance_t *p_instance, int fd)
 HB_FUNC(LIBVLC_MEDIA_NEW_FD)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     libvlc_ret_media(libvlc_media_new_fd(libvlc_par_instance(1), libvlc_par_int(2)));
   }
@@ -53,7 +53,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_FD)
 // LIBVLC_API libvlc_media_t *libvlc_media_new_as_node(libvlc_instance_t *p_instance, const char *psz_name)
 HB_FUNC(LIBVLC_MEDIA_NEW_AS_NODE)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_ret_media(libvlc_media_new_as_node(libvlc_par_instance(1), hb_parc(2)));
   }
@@ -66,7 +66,7 @@ HB_FUNC(LIBVLC_MEDIA_NEW_AS_NODE)
 // LIBVLC_API void libvlc_media_add_option(libvlc_media_t *p_md, const char * psz_options)
 HB_FUNC(LIBVLC_MEDIA_ADD_OPTION)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
     libvlc_media_add_option(libvlc_par_media(1), hb_parc(2));
   }
@@ -144,7 +144,7 @@ HB_FUNC(LIBVLC_MEDIA_DUPLICATE)
 // LIBVLC_API char *libvlc_media_get_meta(libvlc_media_t *p_md, libvlc_meta_t e_meta)
 HB_FUNC(LIBVLC_MEDIA_GET_META) // TOCHECK: release string ?
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
     hb_retc(libvlc_media_get_meta(libvlc_par_media(1), (libvlc_meta_t)hb_parni(2)));
   }
@@ -265,7 +265,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_PARSED_STATUS)
 // LIBVLC_API void libvlc_media_set_user_data(libvlc_media_t *p_md, void *p_new_user_data)
 HB_FUNC(LIBVLC_MEDIA_SET_USER_DATA)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
     libvlc_media_set_user_data(libvlc_par_media(1), (void *)hb_parptr(2));
   }
@@ -293,7 +293,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_USER_DATA)
 // LIBVLC_API const char *libvlc_media_get_codec_description(libvlc_track_type_t i_type, uint32_t i_codec)
 HB_FUNC(LIBVLC_MEDIA_GET_CODEC_DESCRIPTION)
 {
-  if (hb_pcount() == 2)
+  if (hb_pcount() == 2 && HB_ISNUM(1) && HB_ISNUM(2))
   {
     hb_retc((const char *)libvlc_media_get_codec_description((libvlc_track_type_t)hb_parni(1), (uint32_t)hb_parni(2)));
   }
