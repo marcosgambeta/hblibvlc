@@ -421,7 +421,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_SPU_COUNT)
 // LIBVLC_API libvlc_track_description_t * libvlc_video_get_spu_description(libvlc_media_player_t *p_mi)
 HB_FUNC(LIBVLC_VIDEO_GET_SPU_DESCRIPTION)
 {
-  hb_retptr((libvlc_track_description_t *)libvlc_video_get_spu_description(libvlc_par_media_player(1)));
+  libvlc_ret_track_description(libvlc_video_get_spu_description(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API int libvlc_video_set_spu(libvlc_media_player_t *p_mi, int i_spu)
@@ -483,7 +483,7 @@ HB_FUNC(LIBVLC_VIDEO_GET_TRACK_COUNT)
 // LIBVLC_API libvlc_track_description_t * libvlc_video_get_track_description(libvlc_media_player_t *p_mi)
 HB_FUNC(LIBVLC_VIDEO_GET_TRACK_DESCRIPTION)
 {
-  hb_retptr((libvlc_track_description_t *)libvlc_video_get_track_description(libvlc_par_media_player(1)));
+  libvlc_ret_track_description(libvlc_video_get_track_description(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API int libvlc_video_get_track(libvlc_media_player_t *p_mi)
@@ -665,7 +665,7 @@ HB_FUNC(LIBVLC_AUDIO_GET_TRACK_COUNT)
 // LIBVLC_API libvlc_track_description_t * libvlc_audio_get_track_description(libvlc_media_player_t *p_mi)
 HB_FUNC(LIBVLC_AUDIO_GET_TRACK_DESCRIPTION)
 {
-  hb_retptr((libvlc_track_description_t *)libvlc_audio_get_track_description(libvlc_par_media_player(1)));
+  libvlc_ret_track_description(libvlc_audio_get_track_description(libvlc_par_media_player(1)));
 }
 
 // LIBVLC_API int libvlc_audio_get_track(libvlc_media_player_t *p_mi)
