@@ -25,7 +25,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)
 // LIBVLC_API int libvlc_media_discoverer_start(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_START)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_int(libvlc_media_discoverer_start((libvlc_media_discoverer_t *)hb_parptr(1)));
   }
@@ -38,7 +38,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_START)
 // LIBVLC_API void libvlc_media_discoverer_stop(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_STOP)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_discoverer_stop((libvlc_media_discoverer_t *)hb_parptr(1));
   }
@@ -51,7 +51,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_STOP)
 // LIBVLC_API void libvlc_media_discoverer_release(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_RELEASE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_discoverer_release((libvlc_media_discoverer_t *)hb_parptr(1));
   }
@@ -64,7 +64,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_RELEASE)
 // LIBVLC_API libvlc_media_list_t * libvlc_media_discoverer_media_list(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_MEDIA_LIST)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_media_list(libvlc_media_discoverer_media_list((libvlc_media_discoverer_t *)hb_parptr(1)));
   }
@@ -77,7 +77,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_MEDIA_LIST)
 // LIBVLC_API int libvlc_media_discoverer_is_running(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_IS_RUNNING)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_int(libvlc_media_discoverer_is_running((libvlc_media_discoverer_t *)hb_parptr(1)));
   }

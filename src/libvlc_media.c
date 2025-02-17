@@ -92,7 +92,7 @@ HB_FUNC(LIBVLC_MEDIA_ADD_OPTION_FLAG)
 // LIBVLC_API void libvlc_media_retain(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_RETAIN)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_retain(libvlc_par_media(1));
   }
@@ -105,7 +105,7 @@ HB_FUNC(LIBVLC_MEDIA_RETAIN)
 // LIBVLC_API void libvlc_media_release(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_RELEASE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_release(libvlc_par_media(1));
   }
@@ -118,7 +118,7 @@ HB_FUNC(LIBVLC_MEDIA_RELEASE)
 // LIBVLC_API char *libvlc_media_get_mrl(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_MRL) // TOCHECK: release string ?
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     hb_retc(libvlc_media_get_mrl(libvlc_par_media(1)));
   }
@@ -131,7 +131,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_MRL) // TOCHECK: release string ?
 // LIBVLC_API libvlc_media_t *libvlc_media_duplicate(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_DUPLICATE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_media(libvlc_media_duplicate(libvlc_par_media(1)));
   }
@@ -170,7 +170,7 @@ HB_FUNC(LIBVLC_MEDIA_SET_META)
 // LIBVLC_API int libvlc_media_save_meta(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_SAVE_META)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_int(libvlc_media_save_meta(libvlc_par_media(1)));
   }
@@ -183,7 +183,7 @@ HB_FUNC(LIBVLC_MEDIA_SAVE_META)
 // LIBVLC_API libvlc_state_t libvlc_media_get_state(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_STATE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     hb_retni((libvlc_state_t)libvlc_media_get_state(libvlc_par_media(1)));
   }
@@ -200,7 +200,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_STATE)
 // LIBVLC_API libvlc_event_manager_t * libvlc_media_event_manager(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_EVENT_MANAGER)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_event_manager(libvlc_media_event_manager(libvlc_par_media(1)));
   }
@@ -213,7 +213,7 @@ HB_FUNC(LIBVLC_MEDIA_EVENT_MANAGER)
 // LIBVLC_API libvlc_time_t libvlc_media_get_duration(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_DURATION)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     hb_retnl((libvlc_time_t)libvlc_media_get_duration(libvlc_par_media(1)));
   }
@@ -239,7 +239,7 @@ HB_FUNC(LIBVLC_MEDIA_PARSE_WITH_OPTIONS)
 // LIBVLC_API void libvlc_media_parse_stop(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_PARSE_STOP)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_parse_stop(libvlc_par_media(1));
   }
@@ -252,7 +252,7 @@ HB_FUNC(LIBVLC_MEDIA_PARSE_STOP)
 // LIBVLC_API libvlc_media_parsed_status_t libvlc_media_get_parsed_status(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_PARSED_STATUS)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     hb_retni((libvlc_media_parsed_status_t)libvlc_media_get_parsed_status(libvlc_par_media(1)));
   }
@@ -278,7 +278,7 @@ HB_FUNC(LIBVLC_MEDIA_SET_USER_DATA)
 // LIBVLC_API void *libvlc_media_get_user_data(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_USER_DATA)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_voidptr(libvlc_media_get_user_data(libvlc_par_media(1)));
   }
@@ -308,7 +308,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_CODEC_DESCRIPTION)
 // LIBVLC_API libvlc_media_type_t libvlc_media_get_type(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_GET_TYPE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     hb_retni((libvlc_media_type_t)libvlc_media_get_type(libvlc_par_media(1)));
   }
@@ -334,7 +334,7 @@ HB_FUNC(LIBVLC_MEDIA_SLAVES_ADD)
 // LIBVLC_API void libvlc_media_slaves_clear(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_SLAVES_CLEAR)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_media_slaves_clear(libvlc_par_media(1));
   }

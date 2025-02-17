@@ -12,7 +12,7 @@
 // LIBVLC_API void libvlc_vlm_release(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_VLM_RELEASE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_vlm_release(libvlc_par_instance(1));
   }
@@ -284,7 +284,7 @@ HB_FUNC(LIBVLC_VLM_GET_MEDIA_INSTANCE_RATE)
 // LIBVLC_API libvlc_event_manager_t * libvlc_vlm_get_event_manager(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_VLM_GET_EVENT_MANAGER)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_event_manager(libvlc_vlm_get_event_manager(libvlc_par_instance(1)));
   }

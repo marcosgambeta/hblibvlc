@@ -27,7 +27,7 @@ HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
 // LIBVLC_API void * libvlc_dialog_get_context(libvlc_dialog_id *p_id)
 HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_voidptr(libvlc_dialog_get_context(libvlc_par_dialog_id(1)));
   }
@@ -55,7 +55,7 @@ HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
 // LIBVLC_API int libvlc_dialog_dismiss(libvlc_dialog_id *p_id)
 HB_FUNC(LIBVLC_DIALOG_DISMISS)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_int(libvlc_dialog_dismiss(libvlc_par_dialog_id(1)));
   }

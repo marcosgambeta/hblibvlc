@@ -55,7 +55,7 @@ HB_FUNC(LIBVLC_NEW)
 // LIBVLC_API void libvlc_release(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_RELEASE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_release(libvlc_par_instance(1));
   }
@@ -68,7 +68,7 @@ HB_FUNC(LIBVLC_RELEASE)
 // LIBVLC_API void libvlc_retain(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_RETAIN)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_retain(libvlc_par_instance(1));
   }
@@ -161,7 +161,7 @@ HB_FUNC(LIBVLC_GET_CHANGESET)
 // LIBVLC_API void libvlc_free(void *ptr)
 HB_FUNC(LIBVLC_FREE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_free(hb_parptr(1));
   }
@@ -178,7 +178,7 @@ HB_FUNC(LIBVLC_FREE)
 // LIBVLC_API const char * libvlc_event_type_name(libvlc_event_type_t event_type)
 HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISNUM(1))
   {
     hb_retc(libvlc_event_type_name(libvlc_par_event_type(1)));
   }
@@ -195,7 +195,7 @@ HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
 // LIBVLC_API void libvlc_log_unset(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_LOG_UNSET)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_log_unset(libvlc_par_instance(1));
   }
@@ -212,7 +212,7 @@ HB_FUNC(LIBVLC_LOG_UNSET)
 // LIBVLC_API void libvlc_module_description_list_release(libvlc_module_description_t *p_list)
 HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_module_description_list_release(libvlc_par_module_description(1));
   }
@@ -225,7 +225,7 @@ HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
 // LIBVLC_API libvlc_module_description_t *libvlc_audio_filter_list_get(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_AUDIO_FILTER_LIST_GET)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_module_description(libvlc_audio_filter_list_get(libvlc_par_instance(1)));
   }
@@ -238,7 +238,7 @@ HB_FUNC(LIBVLC_AUDIO_FILTER_LIST_GET)
 // LIBVLC_API libvlc_module_description_t *libvlc_video_filter_list_get(libvlc_instance_t *p_instance)
 HB_FUNC(LIBVLC_VIDEO_FILTER_LIST_GET)
 {
-  if (hb_pcount() == 1)
+  if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
     libvlc_ret_module_description(libvlc_video_filter_list_get(libvlc_par_instance(1)));
   }
