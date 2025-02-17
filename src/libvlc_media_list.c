@@ -95,5 +95,5 @@ HB_FUNC(LIBVLC_MEDIA_LIST_UNLOCK)
 // LIBVLC_API libvlc_event_manager_t * libvlc_media_list_event_manager(libvlc_media_list_t *p_ml)
 HB_FUNC(LIBVLC_MEDIA_LIST_EVENT_MANAGER)
 {
-  hb_retptr((libvlc_event_manager_t *)libvlc_media_list_event_manager((libvlc_media_list_t *)hb_parptr(1)));
+  libvlc_ret_event_manager(libvlc_media_list_event_manager((libvlc_media_list_t *)hb_parptr(1)));
 }

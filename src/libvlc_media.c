@@ -101,7 +101,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_STATE)
 // LIBVLC_API libvlc_event_manager_t * libvlc_media_event_manager(libvlc_media_t *p_md)
 HB_FUNC(LIBVLC_MEDIA_EVENT_MANAGER)
 {
-  hb_retptr((libvlc_event_manager_t *)libvlc_media_event_manager(libvlc_par_media(1)));
+  libvlc_ret_event_manager(libvlc_media_event_manager(libvlc_par_media(1)));
 }
 
 // LIBVLC_API libvlc_time_t libvlc_media_get_duration(libvlc_media_t *p_md)

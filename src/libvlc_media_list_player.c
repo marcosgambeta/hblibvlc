@@ -29,7 +29,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_RETAIN)
 // LIBVLC_API libvlc_event_manager_t * libvlc_media_list_player_event_manager(libvlc_media_list_player_t * p_mlp)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_EVENT_MANAGER)
 {
-  hb_retptr((libvlc_event_manager_t *)libvlc_media_list_player_event_manager((libvlc_media_list_player_t *)hb_parptr(1)));
+  libvlc_ret_event_manager(libvlc_media_list_player_event_manager((libvlc_media_list_player_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API void libvlc_media_list_player_set_media_player(libvlc_media_list_player_t * p_mlp, libvlc_media_player_t * p_mi)

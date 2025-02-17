@@ -71,7 +71,7 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_STOP)
 // LIBVLC_API libvlc_event_manager_t * libvlc_renderer_discoverer_event_manager(libvlc_renderer_discoverer_t *p_rd)
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_EVENT_MANAGER)
 {
-  hb_retptr((libvlc_event_manager_t *)libvlc_renderer_discoverer_event_manager((libvlc_renderer_discoverer_t *)hb_parptr(1)));
+  libvlc_ret_event_manager(libvlc_renderer_discoverer_event_manager((libvlc_renderer_discoverer_t *)hb_parptr(1)));
 }
 
 // LIBVLC_API size_t libvlc_renderer_discoverer_list_get(libvlc_instance_t *p_inst, libvlc_rd_description_t ***ppp_services)
