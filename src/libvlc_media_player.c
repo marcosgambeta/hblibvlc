@@ -665,7 +665,7 @@ HB_FUNC(LIBVLC_TRACK_DESCRIPTION_LIST_RELEASE)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_track_description_list_release((libvlc_track_description_t *)hb_parptr(1));
+    libvlc_track_description_list_release(libvlc_par_track_description(1));
   }
   else
   {
