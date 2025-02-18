@@ -1218,7 +1218,7 @@ HB_FUNC(LIBVLC_AUDIO_OUTPUT_LIST_RELEASE)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_audio_output_list_release((libvlc_audio_output_t *)hb_parptr(1));
+    libvlc_audio_output_list_release(libvlc_par_audio_output(1));
   }
   else
   {
