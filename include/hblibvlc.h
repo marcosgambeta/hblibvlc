@@ -27,6 +27,7 @@
 #define libvlc_par_track_description(n) (libvlc_track_description_t *)hb_parptr(n)
 #define libvlc_par_audio_output(n) (libvlc_audio_output_t *)hb_parptr(n)
 #define libvlc_par_audio_output_device(n) (libvlc_audio_output_device_t *)hb_parptr(n)
+#define libvlc_par_const_renderer_item(n) (const libvlc_renderer_item_t *)hb_parptr(n)
 
 // macros for return
 #define libvlc_ret_int(x) hb_retni(x)

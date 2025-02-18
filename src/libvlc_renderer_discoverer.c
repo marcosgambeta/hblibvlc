@@ -40,7 +40,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_NAME)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    hb_retc((const char *)libvlc_renderer_item_name((const libvlc_renderer_item_t *)hb_parptr(1)));
+    hb_retc((const char *)libvlc_renderer_item_name(libvlc_par_const_renderer_item(1)));
   }
   else
   {
@@ -53,7 +53,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_TYPE)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    hb_retc((const char *)libvlc_renderer_item_type((const libvlc_renderer_item_t *)hb_parptr(1)));
+    hb_retc((const char *)libvlc_renderer_item_type(libvlc_par_const_renderer_item(1)));
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_ICON_URI)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    hb_retc((const char *)libvlc_renderer_item_icon_uri((const libvlc_renderer_item_t *)hb_parptr(1)));
+    hb_retc((const char *)libvlc_renderer_item_icon_uri(libvlc_par_const_renderer_item(1)));
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_int(libvlc_renderer_item_flags((const libvlc_renderer_item_t *)hb_parptr(1)));
+    libvlc_ret_int(libvlc_renderer_item_flags(libvlc_par_const_renderer_item(1)));
   }
   else
   {
