@@ -23,6 +23,7 @@
 #define libvlc_par_media_library(n) (libvlc_media_library_t *)hb_parptr(n)
 #define libvlc_par_media_discoverer(n) (libvlc_media_discoverer_t *)hb_parptr(n)
 #define libvlc_par_media_list(n) (libvlc_media_list_t *)hb_parptr(n)
+#define libvlc_par_media_list_player(n) (libvlc_media_list_player_t *)hb_parptr(n)
 
 // macros for return
 #define libvlc_ret_int(x) hb_retni(x)
