@@ -27,7 +27,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_RELEASE)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_media_list_release((libvlc_media_list_t *)hb_parptr(1));
+    libvlc_media_list_release(libvlc_par_media_list(1));
   }
   else
   {
@@ -40,7 +40,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_RETAIN)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_media_list_retain((libvlc_media_list_t *)hb_parptr(1));
+    libvlc_media_list_retain(libvlc_par_media_list(1));
   }
   else
   {
@@ -53,7 +53,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_SET_MEDIA)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
-    libvlc_media_list_set_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2));
+    libvlc_media_list_set_media(libvlc_par_media_list(1), libvlc_par_media(2));
   }
   else
   {
@@ -66,7 +66,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_MEDIA)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_media(libvlc_media_list_media((libvlc_media_list_t *)hb_parptr(1)));
+    libvlc_ret_media(libvlc_media_list_media(libvlc_par_media_list(1)));
   }
   else
   {
@@ -79,7 +79,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_ADD_MEDIA)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
-    libvlc_ret_int(libvlc_media_list_add_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
+    libvlc_ret_int(libvlc_media_list_add_media(libvlc_par_media_list(1), libvlc_par_media(2)));
   }
   else
   {
@@ -92,7 +92,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_INSERT_MEDIA)
 {
   if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISPOINTER(2) && HB_ISNUM(3))
   {
-    libvlc_ret_int(libvlc_media_list_insert_media((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2), libvlc_par_int(3)));
+    libvlc_ret_int(libvlc_media_list_insert_media(libvlc_par_media_list(1), libvlc_par_media(2), libvlc_par_int(3)));
   }
   else
   {
@@ -105,7 +105,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_REMOVE_INDEX)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
-    libvlc_ret_int(libvlc_media_list_remove_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
+    libvlc_ret_int(libvlc_media_list_remove_index(libvlc_par_media_list(1), libvlc_par_int(2)));
   }
   else
   {
@@ -118,7 +118,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_COUNT)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_int(libvlc_media_list_count((libvlc_media_list_t *)hb_parptr(1)));
+    libvlc_ret_int(libvlc_media_list_count(libvlc_par_media_list(1)));
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_ITEM_AT_INDEX)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
-    libvlc_ret_media(libvlc_media_list_item_at_index((libvlc_media_list_t *)hb_parptr(1), libvlc_par_int(2)));
+    libvlc_ret_media(libvlc_media_list_item_at_index(libvlc_par_media_list(1), libvlc_par_int(2)));
   }
   else
   {
@@ -144,7 +144,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_INDEX_OF_ITEM)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
-    libvlc_ret_int(libvlc_media_list_index_of_item((libvlc_media_list_t *)hb_parptr(1), libvlc_par_media(2)));
+    libvlc_ret_int(libvlc_media_list_index_of_item(libvlc_par_media_list(1), libvlc_par_media(2)));
   }
   else
   {
@@ -157,7 +157,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_IS_READONLY)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_int(libvlc_media_list_is_readonly((libvlc_media_list_t *)hb_parptr(1)));
+    libvlc_ret_int(libvlc_media_list_is_readonly(libvlc_par_media_list(1)));
   }
   else
   {
@@ -170,7 +170,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_LOCK)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_media_list_lock((libvlc_media_list_t *)hb_parptr(1));
+    libvlc_media_list_lock(libvlc_par_media_list(1));
   }
   else
   {
@@ -183,7 +183,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_UNLOCK)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_media_list_unlock((libvlc_media_list_t *)hb_parptr(1));
+    libvlc_media_list_unlock(libvlc_par_media_list(1));
   }
   else
   {
@@ -196,7 +196,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_EVENT_MANAGER)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_event_manager(libvlc_media_list_event_manager((libvlc_media_list_t *)hb_parptr(1)));
+    libvlc_ret_event_manager(libvlc_media_list_event_manager(libvlc_par_media_list(1)));
   }
   else
   {

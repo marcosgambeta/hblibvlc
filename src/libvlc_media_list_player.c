@@ -92,7 +92,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_MEDIA_LIST)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
   {
-    libvlc_media_list_player_set_media_list((libvlc_media_list_player_t *)hb_parptr(1), (libvlc_media_list_t *)hb_parptr(2));
+    libvlc_media_list_player_set_media_list((libvlc_media_list_player_t *)hb_parptr(1), libvlc_par_media_list(2));
   }
   else
   {
