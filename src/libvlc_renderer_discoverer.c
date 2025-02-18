@@ -105,7 +105,7 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_RELEASE)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_renderer_discoverer_release((libvlc_renderer_discoverer_t *)hb_parptr(1));
+    libvlc_renderer_discoverer_release(libvlc_par_renderer_discoverer(1));
   }
   else
   {
@@ -118,7 +118,7 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_START)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_int(libvlc_renderer_discoverer_start((libvlc_renderer_discoverer_t *)hb_parptr(1)));
+    libvlc_ret_int(libvlc_renderer_discoverer_start(libvlc_par_renderer_discoverer(1)));
   }
   else
   {
@@ -131,7 +131,7 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_STOP)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_renderer_discoverer_stop((libvlc_renderer_discoverer_t *)hb_parptr(1));
+    libvlc_renderer_discoverer_stop(libvlc_par_renderer_discoverer(1));
   }
   else
   {
@@ -144,7 +144,7 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_EVENT_MANAGER)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    libvlc_ret_event_manager(libvlc_renderer_discoverer_event_manager((libvlc_renderer_discoverer_t *)hb_parptr(1)));
+    libvlc_ret_event_manager(libvlc_renderer_discoverer_event_manager(libvlc_par_renderer_discoverer(1)));
   }
   else
   {
