@@ -624,7 +624,7 @@ HB_FUNC(LIBVLC_MEDIA_PLAYER_NAVIGATE)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
   {
-    libvlc_media_player_navigate((libvlc_media_player_t*)hb_parptr(1), libvlc_par_unsigned(2));
+    libvlc_media_player_navigate(libvlc_par_media_player(1), libvlc_par_unsigned(2));
   }
   else
   {
