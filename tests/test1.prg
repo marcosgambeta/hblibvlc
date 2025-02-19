@@ -16,8 +16,11 @@ FUNCTION Main()
 
    CLS
 
-   ? version()
-   ? hb_compiler()
+   ? "version=", version()
+   ? "compiler=", hb_compiler()
+   ? "libvlc version=", libvlc_get_version()
+   ? "libvlc compiler=", libvlc_get_compiler()
+   ? "libvlc changeset=", libvlc_get_changeset()
 
    // initialize libVLC
    vlc_instance := libvlc_new(0, NIL)
