@@ -10,6 +10,7 @@
 #include "hblibvlc.h"
 
 // LIBVLC_API libvlc_media_discoverer_t * libvlc_media_discoverer_new(libvlc_instance_t * p_inst, const char * psz_name)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
@@ -21,8 +22,10 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_NEW)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API int libvlc_media_discoverer_start(libvlc_media_discoverer_t * p_mdis)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_START)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
@@ -34,8 +37,10 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_START)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API void libvlc_media_discoverer_stop(libvlc_media_discoverer_t * p_mdis)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_STOP)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
@@ -47,6 +52,7 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_STOP)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API void libvlc_media_discoverer_release(libvlc_media_discoverer_t * p_mdis)
 HB_FUNC(LIBVLC_MEDIA_DISCOVERER_RELEASE)
@@ -88,5 +94,9 @@ HB_FUNC(LIBVLC_MEDIA_DISCOVERER_IS_RUNNING)
 }
 
 // LIBVLC_API size_t libvlc_media_discoverer_list_get(libvlc_instance_t *p_inst, libvlc_media_discoverer_category_t i_cat, libvlc_media_discoverer_description_t ***ppp_services)
+#if LIBVLC_VERSION_INT >= 0x03000000
+#endif
 
 // LIBVLC_API void libvlc_media_discoverer_list_release(libvlc_media_discoverer_description_t **pp_services, size_t i_count)
+#if LIBVLC_VERSION_INT >= 0x03000000
+#endif

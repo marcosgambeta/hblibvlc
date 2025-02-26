@@ -127,6 +127,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PAUSE)
 }
 
 // LIBVLC_API void libvlc_media_list_player_set_pause(libvlc_media_list_player_t * p_mlp, int do_pause)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_PAUSE)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
@@ -138,6 +139,7 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_PAUSE)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API int libvlc_media_list_player_is_playing(libvlc_media_list_player_t * p_mlp)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_IS_PLAYING)

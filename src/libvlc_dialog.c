@@ -10,8 +10,11 @@
 #include "hblibvlc.h"
 
 // LIBVLC_API void libvlc_dialog_set_callbacks(libvlc_instance_t *p_instance, const libvlc_dialog_cbs *p_cbs, void *p_data)
+#if LIBVLC_VERSION_INT >= 0x03000000
+#endif
 
 // LIBVLC_API void libvlc_dialog_set_context(libvlc_dialog_id *p_id, void *p_context)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
@@ -23,8 +26,10 @@ HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API void * libvlc_dialog_get_context(libvlc_dialog_id *p_id)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
@@ -36,10 +41,14 @@ HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API int libvlc_dialog_post_login(libvlc_dialog_id *p_id, const char *psz_username, const char *psz_password, bool b_store)
+#if LIBVLC_VERSION_INT >= 0x03000000
+#endif
 
 // LIBVLC_API int libvlc_dialog_post_action(libvlc_dialog_id *p_id, int i_action)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
@@ -51,8 +60,10 @@ HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API int libvlc_dialog_dismiss(libvlc_dialog_id *p_id)
+#if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_DISMISS)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
@@ -64,3 +75,4 @@ HB_FUNC(LIBVLC_DIALOG_DISMISS)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif

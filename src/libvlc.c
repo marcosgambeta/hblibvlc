@@ -94,6 +94,7 @@ HB_FUNC(LIBVLC_ADD_INTF)
 // LIBVLC_API void libvlc_set_exit_handler(libvlc_instance_t *p_instance, void (*cb) (void *), void *opaque)
 
 // LIBVLC_API void libvlc_set_user_agent(libvlc_instance_t *p_instance, const char *name, const char *http)
+#if LIBVLC_VERSION_INT >= 0x01010100
 HB_FUNC(LIBVLC_SET_USER_AGENT)
 {
   if (hb_pcount() == 3 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3))
@@ -105,8 +106,10 @@ HB_FUNC(LIBVLC_SET_USER_AGENT)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API void libvlc_set_app_id(libvlc_instance_t *p_instance, const char *id, const char *version, const char *icon)
+#if LIBVLC_VERSION_INT >= 0x02010000
 HB_FUNC(LIBVLC_SET_APP_ID)
 {
   if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISCHAR(4))
@@ -118,6 +121,7 @@ HB_FUNC(LIBVLC_SET_APP_ID)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API const char * libvlc_get_version(void)
 HB_FUNC(LIBVLC_GET_VERSION)
@@ -189,10 +193,15 @@ HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
 }
 
 // LIBVLC_API void libvlc_log_get_context(const libvlc_log_t *ctx, const char **module, const char **file, unsigned *line)
+#if LIBVLC_VERSION_INT >= 0x02010000
+#endif
 
 // LIBVLC_API void libvlc_log_get_object(const libvlc_log_t *ctx, const char **name, const char **header, uintptr_t *id)
+#if LIBVLC_VERSION_INT >= 0x02010000
+#endif
 
 // LIBVLC_API void libvlc_log_unset(libvlc_instance_t *p_instance)
+#if LIBVLC_VERSION_INT >= 0x02010000
 HB_FUNC(LIBVLC_LOG_UNSET)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
@@ -204,10 +213,15 @@ HB_FUNC(LIBVLC_LOG_UNSET)
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
+#endif
 
 // LIBVLC_API void libvlc_log_set(libvlc_instance_t *p_instance, libvlc_log_cb cb, void *data)
+#if LIBVLC_VERSION_INT >= 0x02010000
+#endif
 
 // LIBVLC_API void libvlc_log_set_file(libvlc_instance_t *p_instance, FILE *stream)
+#if LIBVLC_VERSION_INT >= 0x02010000
+#endif
 
 // LIBVLC_API void libvlc_module_description_list_release(libvlc_module_description_t *p_list)
 HB_FUNC(LIBVLC_MODULE_DESCRIPTION_LIST_RELEASE)
