@@ -1,4 +1,10 @@
 # hblibvlc
+
+* [English](#english)
+* [Portuguese](#portuguese)
+
+## English
+
 libvlc for Harbour++, Harbour and xHarbour
 
 This library is a work in progress.
@@ -50,7 +56,65 @@ plugins folder
 libvlc.dll  
 libvlccore.dll  
 
-## Links
+### Links
+
+https://www.videolan.org/vlc/libvlc.html  
+https://www.nuget.org/packages/VideoLAN.LibVLC.Windows  
+
+## Portuguese
+
+libvlc para Harbour++, Harbour e xHarbour
+
+Esta biblioteca é um trabalho em progresso.
+
+Binários para MS-Windows - baixe e extraia o arquivo abaixo:
+
+https://www.nuget.org/api/v2/package/VideoLAN.LibVLC.Windows/3.0.21
+
+build\x86: libvlc para 32-bit
+
+build\x64: libvlc para 64-bit
+
+Defina as variáveis abaixo para 32-bit:
+
+```
+set VLC_INC_DIR=\libvlc\build\x86\include  
+set VLC_LIB_DIR=\libvlc\build\x86  
+```
+
+Defina as variáveis abaixo para 64-bit:
+
+```
+set VLC_INC_DIR=\libvlc\build\x64\include  
+set VLC_LIB_DIR=\libvlc\build\x64  
+```
+
+Ajustes os caminhos conforme seu ambiente.
+
+Para compilar a biblioteca:
+
+```
+hbmk2 hblibvlc.hbp
+```
+
+Para compilar os testes:
+
+```
+hbmk2 test1 ../hblibvlc.hbc
+```
+
+Os testes requerem um arquivo denominado url.txt contendo um link para ser reproduzido.
+
+Exemplo:  
+https://archive.org/download/CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
+
+Requisitos para executar os testes:
+
+pasta de plugins  
+libvlc.dll  
+libvlccore.dll  
+
+### Links
 
 https://www.videolan.org/vlc/libvlc.html  
 https://www.nuget.org/packages/VideoLAN.LibVLC.Windows  
