@@ -118,3 +118,10 @@ libvlccore.dll
 
 https://www.videolan.org/vlc/libvlc.html  
 https://www.nuget.org/packages/VideoLAN.LibVLC.Windows  
+
+### Donativos
+
+Se esta biblioteca for útil para você e desejar apoiar seu desenvolvimento através de donativos,
+basta utilizar a chave Pix abaixo:
+
+marcosgambeta@outlook.com
