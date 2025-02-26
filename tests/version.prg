@@ -1,0 +1,19 @@
+//
+// hblibvlc test
+//
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+//
+
+// Compile with:
+// hbmk2 version ..\hblibvlc.hbc
+
+FUNCTION Main()
+
+   ? "LIBVLC_VERSION_MAJOR=", LIBVLC_VERSION_MAJOR()
+   ? "LIBVLC_VERSION_MINOR=", LIBVLC_VERSION_MINOR()
+   ? "LIBVLC_VERSION_REVISION=", LIBVLC_VERSION_REVISION()
+   ? "LIBVLC_VERSION_EXTRA=", LIBVLC_VERSION_EXTRA()
+   ? "LIBVLC_VERSION=", LIBVLC_VERSION(3, 0, 21, 0), "0x" + HB_NumToHex(LIBVLC_VERSION(3, 0, 21, 0), 8)
+   ? "LIBVLC_VERSION_INT=", LIBVLC_VERSION_INT(), "0x" + HB_NumToHex(LIBVLC_VERSION_INT(), 8)
+
+RETURN NIL
