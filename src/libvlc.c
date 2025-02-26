@@ -29,6 +29,7 @@
 // $END_LICENSE$
 
 #include <vlc/vlc.h>
+#include <vlc/libvlc_version.h>
 #include <hbapi.h>
 #include <hbapierr.h>
 #include "hblibvlc.h"
