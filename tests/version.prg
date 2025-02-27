@@ -5,7 +5,7 @@
 //
 
 // Compile with:
-// hbmk2 version ..\hblibvlc.hbc
+// hbmk2 version
 
 FUNCTION Main()
 

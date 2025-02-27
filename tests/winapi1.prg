@@ -7,7 +7,7 @@
 // This test require Harbour++
 
 // Compile with:
-// hbmk2 test2 -gtgui ../hblibvlc.hbc
+// hbmk2 winapi1
 
 #include <winapi_windows.ch>
 
@@ -70,6 +70,7 @@ PROCEDURE Main()
 
    IF Empty(player)
       waMessageBox(NIL, "libvlc_media_player_new failed", "Error", MB_ICONERROR + MB_OK)
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 
@@ -79,6 +80,8 @@ PROCEDURE Main()
 
    IF Empty(media)
       waMessageBox(NIL, "libvlc_media_new_location failed", "Error", MB_ICONERROR + MB_OK)
+      libvlc_media_player_release(player)
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 

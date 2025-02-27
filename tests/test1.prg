@@ -5,7 +5,7 @@
 //
 
 // Compile with:
-// hbmk2 test1 ../hblibvlc.hbc
+// hbmk2 test1
 
 FUNCTION Main()
 
@@ -39,6 +39,7 @@ FUNCTION Main()
    IF Empty(player)
       ? "libvlc_media_player_new failed"
       ? libvlc_errmsg()
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 
@@ -51,6 +52,8 @@ FUNCTION Main()
    IF Empty(media)
       ? "libvlc_media_new_location failed"
       ? libvlc_errmsg()
+      libvlc_media_player_release(player)
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 
@@ -69,4 +72,4 @@ FUNCTION Main()
    libvlc_media_player_release(player)
    libvlc_release(vlc_instance)
 
-RETURN 0
+RETURN NIL

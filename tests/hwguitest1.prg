@@ -5,7 +5,7 @@
 //
 
 // Compile with:
-// hbmk2 hwguitest1 ..\hblibvlc.hbc \path_to_hwgui\hwgui.hbc
+// hbmk2 hwguitest1 \path_to_hwgui\hwgui.hbc
 
 #include "hwgui.ch"
 
@@ -30,6 +30,7 @@ FUNCTION Main()
 
    IF Empty(player)
       hwg_MsgInfo("libvlc_media_player_new failed")
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 
@@ -39,6 +40,8 @@ FUNCTION Main()
 
    IF Empty(media)
       hwg_MsgInfo("libvlc_media_new_location failed")
+      libvlc_media_player_release(player)
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 

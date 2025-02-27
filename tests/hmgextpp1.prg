@@ -5,7 +5,7 @@
 //
 
 // Compile with:
-// hbmk2 hmgextpp1 ..\hblibvlc.hbc \path_to_hmgextpp\hmgextpp.hbc
+// hbmk2 hmgextpp1 \path_to_hmgextpp\hmgextpp.hbc
 
 #include "minigui.ch"
 
@@ -29,6 +29,7 @@ PROCEDURE Main()
 
    IF Empty(player)
       MsgInfo("libvlc_media_player_new failed")
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 
@@ -38,6 +39,8 @@ PROCEDURE Main()
 
    IF Empty(media)
       MsgInfo("libvlc_media_new_location failed")
+      libvlc_media_player_release(player)
+      libvlc_release(vlc_instance)
       QUIT
    ENDIF
 

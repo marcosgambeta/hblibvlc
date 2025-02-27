@@ -5,7 +5,7 @@
 //
 
 // Compile with:
-// hbmk2 hwguitest3 ..\hblibvlc.hbc \path_to_hwgui\hwgui.hbc
+// hbmk2 hwguitest3 \path_to_hwgui\hwgui.hbc
 
 #include "hwgui.ch"
 
@@ -48,6 +48,7 @@ STATIC FUNCTION ShowDialog()
 
    IF Empty(player)
       hwg_MsgInfo("libvlc_media_player_new failed")
+      libvlc_release(vlc_instance)
       RETURN NIL
    ENDIF
 
@@ -57,6 +58,8 @@ STATIC FUNCTION ShowDialog()
 
    IF Empty(media)
       hwg_MsgInfo("libvlc_media_new_location failed")
+      libvlc_media_player_release(player)
+      libvlc_release(vlc_instance)
       RETURN NIL
    ENDIF
 
