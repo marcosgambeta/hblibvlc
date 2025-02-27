@@ -42,13 +42,18 @@ hbmk2 hblibvlc.hbp
 To compile the tests:
 
 ```
-hbmk2 test1 ../hblibvlc.hbc
+hbmk2 test1
 ```
 
 The tests require a file called url.txt with a link to reproduce.
 
 Example:  
 https://archive.org/download/CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
+
+Note that test2.prg requires a file called path.txt pointing to a local file.
+
+Example:  
+C:\Users\marco\Videos\CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
 
 Requisites to run the tests:
 
@@ -89,7 +94,7 @@ set VLC_INC_DIR=\libvlc\build\x64\include
 set VLC_LIB_DIR=\libvlc\build\x64  
 ```
 
-Ajustes os caminhos conforme seu ambiente.
+Ajuste os caminhos conforme seu ambiente de desenvolvimento.
 
 Para compilar a biblioteca:
 
@@ -100,13 +105,18 @@ hbmk2 hblibvlc.hbp
 Para compilar os testes:
 
 ```
-hbmk2 test1 ../hblibvlc.hbc
+hbmk2 test1
 ```
 
 Os testes requerem um arquivo denominado url.txt contendo um link para ser reproduzido.
 
 Exemplo:  
 https://archive.org/download/CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
+
+Note que test2.prg requer um arquivo chamado path.txt apontando para um arquivo local.
+
+Exemplo:  
+C:\Users\marco\Videos\CC_1916_09_04_TheCount/CC_1916_09_04_TheCount_512kb.mp4  
 
 Requisitos para executar os testes:
 
