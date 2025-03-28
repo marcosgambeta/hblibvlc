@@ -39,7 +39,7 @@ HB_FUNC(LIBVLC_ERRMSG)
 {
   if (hb_pcount() == 0)
   {
-    hb_retc((const char *)libvlc_errmsg());
+    hb_retc(libvlc_errmsg());
   }
   else
   {

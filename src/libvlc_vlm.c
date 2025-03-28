@@ -240,7 +240,7 @@ HB_FUNC(LIBVLC_VLM_SHOW_MEDIA)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
   {
-    hb_retc((const char *)libvlc_vlm_show_media(libvlc_par_instance(1), hb_parc(2)));
+    hb_retc(libvlc_vlm_show_media(libvlc_par_instance(1), hb_parc(2)));
   }
   else
   {

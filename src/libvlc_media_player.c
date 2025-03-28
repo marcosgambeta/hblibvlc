@@ -1596,7 +1596,7 @@ HB_FUNC(LIBVLC_AUDIO_EQUALIZER_GET_PRESET_NAME)
 {
   if (hb_pcount() == 1 && HB_ISNUM(1))
   {
-    hb_retc((const char *)libvlc_audio_equalizer_get_preset_name(libvlc_par_unsigned(1)));
+    hb_retc(libvlc_audio_equalizer_get_preset_name(libvlc_par_unsigned(1)));
   }
   else
   {

@@ -70,7 +70,7 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_NAME)
 {
   if (hb_pcount() == 1 && HB_ISPOINTER(1))
   {
-    hb_retc((const char *)libvlc_renderer_item_name(libvlc_par_const_renderer_item(1)));
+    hb_retc(libvlc_renderer_item_name(libvlc_par_const_renderer_item(1)));
   }
   else
   {

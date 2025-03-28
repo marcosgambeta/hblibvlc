@@ -333,7 +333,7 @@ HB_FUNC(LIBVLC_MEDIA_GET_CODEC_DESCRIPTION)
 {
   if (hb_pcount() == 2 && HB_ISNUM(1) && HB_ISNUM(2))
   {
-    hb_retc((const char *)libvlc_media_get_codec_description((libvlc_track_type_t)hb_parni(1), (uint32_t)hb_parni(2)));
+    hb_retc(libvlc_media_get_codec_description((libvlc_track_type_t)hb_parni(1), (uint32_t)hb_parni(2)));
   }
   else
   {
