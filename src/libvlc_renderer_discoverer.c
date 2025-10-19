@@ -106,7 +106,8 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 }
 #endif
 
-// LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new(libvlc_instance_t *p_inst, const char *psz_name)
+// LIBVLC_API libvlc_renderer_discoverer_t * libvlc_renderer_discoverer_new(libvlc_instance_t *p_inst, const char
+// *psz_name)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 {
@@ -166,7 +167,8 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_EVENT_MANAGER)
 }
 #endif
 
-// LIBVLC_API size_t libvlc_renderer_discoverer_list_get(libvlc_instance_t *p_inst, libvlc_rd_description_t ***ppp_services)
+// LIBVLC_API size_t libvlc_renderer_discoverer_list_get(libvlc_instance_t *p_inst, libvlc_rd_description_t
+// ***ppp_services)
 #if LIBVLC_VERSION_INT >= 0x03000000
 #endif
 

@@ -74,7 +74,8 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_EVENT_MANAGER)
   }
 }
 
-// LIBVLC_API void libvlc_media_list_player_set_media_player(libvlc_media_list_player_t * p_mlp, libvlc_media_player_t * p_mi)
+// LIBVLC_API void libvlc_media_list_player_set_media_player(libvlc_media_list_player_t * p_mlp, libvlc_media_player_t *
+// p_mi)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_MEDIA_PLAYER)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2)) {
@@ -94,7 +95,8 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_GET_MEDIA_PLAYER)
   }
 }
 
-// LIBVLC_API void libvlc_media_list_player_set_media_list(libvlc_media_list_player_t * p_mlp, libvlc_media_list_t * p_mlist)
+// LIBVLC_API void libvlc_media_list_player_set_media_list(libvlc_media_list_player_t * p_mlp, libvlc_media_list_t *
+// p_mlist)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_MEDIA_LIST)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2)) {
@@ -206,7 +208,8 @@ HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_PREVIOUS)
   }
 }
 
-// LIBVLC_API void libvlc_media_list_player_set_playback_mode(libvlc_media_list_player_t * p_mlp, libvlc_playback_mode_t e_mode)
+// LIBVLC_API void libvlc_media_list_player_set_playback_mode(libvlc_media_list_player_t * p_mlp, libvlc_playback_mode_t
+// e_mode)
 HB_FUNC(LIBVLC_MEDIA_LIST_PLAYER_SET_PLAYBACK_MODE)
 {
   if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2)) {

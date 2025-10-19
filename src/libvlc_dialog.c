@@ -34,7 +34,8 @@
 #include <hbapierr.h>
 #include "hblibvlc.h"
 
-// LIBVLC_API void libvlc_dialog_set_callbacks(libvlc_instance_t *p_instance, const libvlc_dialog_cbs *p_cbs, void *p_data)
+// LIBVLC_API void libvlc_dialog_set_callbacks(libvlc_instance_t *p_instance, const libvlc_dialog_cbs *p_cbs, void
+// *p_data)
 #if LIBVLC_VERSION_INT >= 0x03000000
 #endif
 
@@ -62,12 +63,13 @@ HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 }
 #endif
 
-// LIBVLC_API int libvlc_dialog_post_login(libvlc_dialog_id *p_id, const char *psz_username, const char *psz_password, bool b_store)
+// LIBVLC_API int libvlc_dialog_post_login(libvlc_dialog_id *p_id, const char *psz_username, const char *psz_password,
+// bool b_store)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_POST_LOGIN)
 {
   if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISLOG(4)) {
-     libvlc_ret_int(libvlc_dialog_post_login(libvlc_par_dialog_id(1), hb_parc(2), hb_parc(3), (bool)hb_parl(4)));
+    libvlc_ret_int(libvlc_dialog_post_login(libvlc_par_dialog_id(1), hb_parc(2), hb_parc(3), (bool)hb_parl(4)));
   } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }

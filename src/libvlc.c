@@ -112,7 +112,8 @@ HB_FUNC(LIBVLC_SET_USER_AGENT)
 }
 #endif
 
-// LIBVLC_API void libvlc_set_app_id(libvlc_instance_t *p_instance, const char *id, const char *version, const char *icon)
+// LIBVLC_API void libvlc_set_app_id(libvlc_instance_t *p_instance, const char *id, const char *version, const char
+// *icon)
 #if LIBVLC_VERSION_INT >= 0x02010000
 HB_FUNC(LIBVLC_SET_APP_ID)
 {
@@ -164,9 +165,11 @@ HB_FUNC(LIBVLC_FREE)
   }
 }
 
-// LIBVLC_API int libvlc_event_attach(libvlc_event_manager_t *p_event_manager, libvlc_event_type_t i_event_type, libvlc_callback_t f_callback, void *user_data)
+// LIBVLC_API int libvlc_event_attach(libvlc_event_manager_t *p_event_manager, libvlc_event_type_t i_event_type,
+// libvlc_callback_t f_callback, void *user_data)
 
-// LIBVLC_API void libvlc_event_detach(libvlc_event_manager_t *p_event_manager, libvlc_event_type_t i_event_type, libvlc_callback_t f_callback, void *p_user_data)
+// LIBVLC_API void libvlc_event_detach(libvlc_event_manager_t *p_event_manager, libvlc_event_type_t i_event_type,
+// libvlc_callback_t f_callback, void *p_user_data)
 
 // LIBVLC_API const char * libvlc_event_type_name(libvlc_event_type_t event_type)
 HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
@@ -178,7 +181,8 @@ HB_FUNC(LIBVLC_EVENT_TYPE_NAME)
   }
 }
 
-// LIBVLC_API void libvlc_log_get_context(const libvlc_log_t *ctx, const char **module, const char **file, unsigned *line)
+// LIBVLC_API void libvlc_log_get_context(const libvlc_log_t *ctx, const char **module, const char **file, unsigned
+// *line)
 #if LIBVLC_VERSION_INT >= 0x02010000
 #endif
 
