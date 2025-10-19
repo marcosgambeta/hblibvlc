@@ -38,12 +38,9 @@
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_HOLD)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_renderer_item(libvlc_renderer_item_hold(libvlc_par_renderer_item(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -53,12 +50,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_HOLD)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_RELEASE)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_renderer_item_release(libvlc_par_renderer_item(1));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -68,12 +62,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_RELEASE)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_NAME)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     hb_retc(libvlc_renderer_item_name(libvlc_par_const_renderer_item(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -83,12 +74,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_NAME)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_TYPE)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     hb_retc((const char *)libvlc_renderer_item_type(libvlc_par_const_renderer_item(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -98,12 +86,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_TYPE)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_ICON_URI)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     hb_retc((const char *)libvlc_renderer_item_icon_uri(libvlc_par_const_renderer_item(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -113,12 +98,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_ICON_URI)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_int(libvlc_renderer_item_flags(libvlc_par_const_renderer_item(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -128,12 +110,9 @@ HB_FUNC(LIBVLC_RENDERER_ITEM_FLAGS)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 {
-  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2))
-  {
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISCHAR(2)) {
     libvlc_ret_renderer_discoverer(libvlc_renderer_discoverer_new(libvlc_par_instance(1), hb_parc(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -143,12 +122,9 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_NEW)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_RELEASE)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_renderer_discoverer_release(libvlc_par_renderer_discoverer(1));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -158,12 +134,9 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_RELEASE)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_START)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_int(libvlc_renderer_discoverer_start(libvlc_par_renderer_discoverer(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -173,12 +146,9 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_START)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_STOP)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_renderer_discoverer_stop(libvlc_par_renderer_discoverer(1));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -188,12 +158,9 @@ HB_FUNC(LIBVLC_RENDERER_DISCOVERER_STOP)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_RENDERER_DISCOVERER_EVENT_MANAGER)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_event_manager(libvlc_renderer_discoverer_event_manager(libvlc_par_renderer_discoverer(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }

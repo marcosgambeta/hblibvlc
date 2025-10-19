@@ -42,12 +42,9 @@
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
 {
-  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2))
-  {
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISPOINTER(2)) {
     libvlc_dialog_set_context(libvlc_par_dialog_id(1), (void *)hb_parptr(2));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -57,12 +54,9 @@ HB_FUNC(LIBVLC_DIALOG_SET_CONTEXT)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_voidptr(libvlc_dialog_get_context(libvlc_par_dialog_id(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -72,12 +66,9 @@ HB_FUNC(LIBVLC_DIALOG_GET_CONTEXT)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_POST_LOGIN)
 {
-  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISLOG(4))
-  {
+  if (hb_pcount() == 4 && HB_ISPOINTER(1) && HB_ISCHAR(2) && HB_ISCHAR(3) && HB_ISLOG(4)) {
      libvlc_ret_int(libvlc_dialog_post_login(libvlc_par_dialog_id(1), hb_parc(2), hb_parc(3), (bool)hb_parl(4)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -87,12 +78,9 @@ HB_FUNC(LIBVLC_DIALOG_POST_LOGIN)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
 {
-  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2))
-  {
+  if (hb_pcount() == 2 && HB_ISPOINTER(1) && HB_ISNUM(2)) {
     libvlc_ret_int(libvlc_dialog_post_action(libvlc_par_dialog_id(1), libvlc_par_int(2)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
@@ -102,12 +90,9 @@ HB_FUNC(LIBVLC_DIALOG_POST_ACTION)
 #if LIBVLC_VERSION_INT >= 0x03000000
 HB_FUNC(LIBVLC_DIALOG_DISMISS)
 {
-  if (hb_pcount() == 1 && HB_ISPOINTER(1))
-  {
+  if (hb_pcount() == 1 && HB_ISPOINTER(1)) {
     libvlc_ret_int(libvlc_dialog_dismiss(libvlc_par_dialog_id(1)));
-  }
-  else
-  {
+  } else {
     hb_errRT_BASE(EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS);
   }
 }
