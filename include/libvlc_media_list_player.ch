@@ -1,7 +1,7 @@
 //
 // hblibvlc - Binding library for Harbour++/Harbour/xHarbour and libvlc
 //
-// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta AT outlook DOT com>
+// Copyright (c) 2025 Marcos Antonio Gambeta <marcosgambeta@outlook.com>
 //
 
 #ifndef LIBVLC_MEDIA_LIST_PLAYER_CH
